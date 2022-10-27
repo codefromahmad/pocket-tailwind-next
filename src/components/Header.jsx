@@ -119,22 +119,44 @@ export function Header() {
                           )} */}
                           <div className="mt-8 flex flex-col gap-4">
                             <Link href="/">
-                              <a className="rounded-lg p-3 duration-300 hover:bg-slate-200">
+                              <a
+                                className={`rounded-lg p-3 ${
+                                  router.pathname === '/' ? 'bg-slate-200' : ''
+                                } duration-300 hover:bg-slate-200`}
+                              >
                                 Home
                               </a>
                             </Link>
                             <Link href="/how-it-works">
-                              <a className="rounded-lg p-3 duration-300 hover:bg-slate-200">
+                              <a
+                                className={`rounded-lg p-3 ${
+                                  router.pathname === '/how-it-works'
+                                    ? 'bg-slate-200'
+                                    : ''
+                                } duration-300 hover:bg-slate-200`}
+                              >
                                 How it works
                               </a>
                             </Link>
                             <Link href="/contact">
-                              <a className="rounded-lg p-3 duration-300 hover:bg-slate-200">
+                              <a
+                                className={`rounded-lg p-3 ${
+                                  router.pathname === '/contact'
+                                    ? 'bg-slate-200'
+                                    : ''
+                                } duration-300 hover:bg-slate-200`}
+                              >
                                 Contact
                               </a>
                             </Link>
                             <Link href="/support">
-                              <a className="rounded-lg p-3 duration-300 hover:bg-slate-200">
+                              <a
+                                className={`rounded-lg p-3 ${
+                                  router.pathname === '/support'
+                                    ? 'bg-slate-200'
+                                    : ''
+                                } duration-300 hover:bg-slate-200`}
+                              >
                                 Support
                               </a>
                             </Link>

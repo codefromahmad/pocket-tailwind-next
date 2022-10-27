@@ -215,7 +215,7 @@ const Support = () => {
     <div>
       <Header />
       <div className="w-full">
-        <div className="mx-auto max-w-screen-lg">
+        <div className="mx-auto max-w-screen-lg px-5">
           <div>
             <h1 className="text-4xl font-bold">Hello!</h1>
             <h1 className="text-4xl font-bold">How can we help?</h1>
@@ -236,7 +236,7 @@ const Support = () => {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 gap-5 px-5 text-center sm:grid-cols-3 sm:text-left">
             {supportLinks.map(({ id, title, links }) => (
               <div key={id} className="py-8">
                 <h1 className="my-4 text-xl font-bold">{title}</h1>
