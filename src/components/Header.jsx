@@ -118,32 +118,26 @@ export function Header() {
                             </div>
                           )} */}
                           <div className="mt-8 flex flex-col gap-4">
-                            <a
-                              href="/"
-                              variant="outline"
-                              className="rounded-lg p-3 duration-300 hover:bg-slate-200"
-                            >
-                              Home
-                            </a>
-                            <a
-                              href="/how-it-works"
-                              variant="outline"
-                              className="rounded-lg p-3 duration-300 hover:bg-slate-200"
-                            >
-                              How it works
-                            </a>
-                            <a
-                              href="/contact"
-                              className="rounded-lg p-3 duration-300 hover:bg-slate-200"
-                            >
-                              Contact
-                            </a>
-                            <a
-                              href="/support"
-                              className="rounded-lg p-3 duration-300 hover:bg-slate-200"
-                            >
-                              Support
-                            </a>
+                            <Link href="/">
+                              <a className="rounded-lg p-3 duration-300 hover:bg-slate-200">
+                                Home
+                              </a>
+                            </Link>
+                            <Link href="/how-it-works">
+                              <a className="rounded-lg p-3 duration-300 hover:bg-slate-200">
+                                How it works
+                              </a>
+                            </Link>
+                            <Link href="/contact">
+                              <a className="rounded-lg p-3 duration-300 hover:bg-slate-200">
+                                Contact
+                              </a>
+                            </Link>
+                            <Link href="/support">
+                              <a className="rounded-lg p-3 duration-300 hover:bg-slate-200">
+                                Support
+                              </a>
+                            </Link>
                           </div>
                         </Popover.Panel>
                       </>
@@ -155,7 +149,6 @@ export function Header() {
             <div className="hidden justify-between lg:flex">
               <Link href="/">
                 <a
-                  variant="outline"
                   className={`mx-1 rounded-lg p-3 ${
                     router.pathname === '/' ? 'bg-slate-200' : ''
                   } duration-300 hover:bg-slate-200`}
@@ -166,7 +159,6 @@ export function Header() {
 
               <Link href="/how-it-works">
                 <a
-                  variant="outline"
                   className={`mx-1 rounded-lg p-3 ${
                     router.pathname === '/how-it-works' ? 'bg-slate-200' : ''
                   } duration-300 hover:bg-slate-200`}

@@ -1,5 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
+import img from '../images/cyber-bg.png'
 
 const SecondRulesBlock = () => {
   const Animations = {
@@ -18,19 +20,14 @@ const SecondRulesBlock = () => {
   return (
     <div>
       <motion.div {...Animations}>
+        <div className="mx-auto flex max-w-screen-sm items-center justify-center">
+          <Image src={img} alt="" />
+        </div>
         <div className="grid grid-cols-1">
-          <img
-            src="https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"
-            width={300}
-            height={200}
-            className="m-auto pb-5"
-            alt="alsdkjf"
-          />
-          {/* <Image src={img} width="300" height="300" /> */}
           <div className="mx-auto max-w-screen-sm">
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
+              industry. Lorem Ipsum has been the industrys standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
               type and scrambled it to make a type specimen book. It has
               survived not only five centuries, but also the leap into
@@ -43,7 +40,7 @@ const SecondRulesBlock = () => {
             <br />
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
+              industry. Lorem Ipsum has been the industrys standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
               type and scrambled it to make a type specimen book. It has
               survived not only five centuries, but also the leap into

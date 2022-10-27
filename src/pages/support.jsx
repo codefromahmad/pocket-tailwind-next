@@ -4,7 +4,7 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import { BiSearch } from 'react-icons/bi'
 
-const support = () => {
+const Support = () => {
   const supportLinks = [
     {
       id: 1,
@@ -257,4 +257,4 @@ const support = () => {
   )
 }
 
-export default support
+export default Support

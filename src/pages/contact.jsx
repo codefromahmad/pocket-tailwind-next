@@ -3,9 +3,11 @@ import { Header } from '@/components/Header'
 import React, { useState } from 'react'
 import { ImFacebook, ImWhatsapp } from 'react-icons/im'
 import { GrInstagram } from 'react-icons/gr'
+import img from '../images/Avatar_1.png'
+import Image from 'next/image'
 
-const contact = () => {
-  const [inputs, setInputs] = useState({})
+const Contact = () => {
+  const [inputs, setInputs] = useState('')
 
   const handleChange = (event) => {
     const name = event.target.name
@@ -33,8 +35,8 @@ const contact = () => {
                 for you.
               </p>
             </div>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/en/8/86/Avatar_Aang.png"
+            <Image
+              src={img}
               width={250}
               height={200}
               className="self-center pb-5"
@@ -142,4 +144,4 @@ const contact = () => {
   )
 }
 
-export default contact
+export default Contact
