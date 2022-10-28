@@ -215,17 +215,8 @@ const Support = () => {
   }
 
   useEffect(() => {
-    console.log('Inside useEffect printing result : ' + search.toLowerCase())
-    console.log('====================================')
-    if (result) {
-      result.map((item) => item.links.map((i) => console.log(i.title)))
-    }
-    console.log('====================================')
-  }, [result])
-
-  useEffect(() => {
     getData(search)
-  }, [search])
+  }, [search, getData])
 
   const handleClose = () => {
     setResult('')
@@ -272,8 +263,8 @@ const Support = () => {
                 {search &&
                   result &&
                   result.map((item) =>
-                    item.links.map((data) => (
-                      <Link href={`${data.link}`} className="">
+                    item.links.map((data, index) => (
+                      <Link href={`${data.link}`} key={index} className="">
                         <p className="max-w-screen-sm cursor-pointer py-2 pl-4 text-lg text-gray-800 duration-200 hover:bg-slate-100 ">
                           {data.title}
                         </p>
