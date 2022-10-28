@@ -100,7 +100,7 @@ const Rules = () => {
             </div> */}
           </div>
         </div>
-        <div className="py-20">
+        <div className="py-5 md:py-14">
           {activePeriod === 'Dailt Drawdown' && <RulesBlock />}
           {activePeriod === 'Account Drawdown' && <RulesBlock />}
           {activePeriod === 'Minimum Trading Days' && <RulesBlock />}

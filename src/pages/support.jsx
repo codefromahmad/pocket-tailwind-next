@@ -12,7 +12,7 @@ const Support = () => {
       links: [
         {
           id: 1,
-          title: 'What You Need to Get Started',
+          title: 'How You Need to Get Started',
           link: '/articles/what-you-need-to-get-started/',
         },
         {
@@ -208,7 +208,7 @@ const Support = () => {
       ),
     }))
     setResult(data)
-    console.log(data)
+    console.log(result)
   }
 
   return (
@@ -232,7 +232,7 @@ const Support = () => {
                   placeholder="Search"
                   className="w-full border-none bg-transparent text-xl focus:ring-0"
                 />
-                {/* {result && console.log(result.links)} */}
+                {/* {result && result.map((item) => console.log(item.links))} */}
               </div>
             </div>
           </div>
