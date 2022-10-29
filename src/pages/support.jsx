@@ -13,18 +13,18 @@ const Support = () => {
       links: [
         {
           id: 1,
-          title: 'How You Need to Get Started',
-          link: '/articles/what-you-need-to-get-started/',
+          title: 'What You Need to Get Started',
+          link: '/articles/what-you-need-to-get-started',
         },
         {
           id: 2,
           title: 'Investments you can make on Robinhood',
-          link: '/articles/investments-you-can-make-on-robinhood/',
+          link: '/articles/investments-you-can-make-on-robinhood',
         },
         {
           id: 3,
           title: 'Open My Account',
-          link: '/articles/open-my-account/',
+          link: '/articles/open-my-account',
         },
       ],
     },
@@ -34,18 +34,18 @@ const Support = () => {
       links: [
         {
           id: 1,
-          title: 'What to know in light of Russia’s attack on Ukraine',
-          link: '/articles/russia-securities-sanctions/',
+          title: 'How You Need to Get Started',
+          link: '/articles/what-you-need-to-get-started',
         },
         {
           id: 2,
-          title: 'Massachusetts State and Robinhood',
-          link: '/articles/massachusetts-state-and-robinhood/',
+          title: 'Investments you can make on Robinhood',
+          link: '/articles/investments-you-can-make-on-robinhood',
         },
         {
           id: 3,
-          title: 'November 3 data security incident',
-          link: '/articles/november-3-data-security-incident/',
+          title: 'Open My Account',
+          link: '/articles/open-my-account',
         },
       ],
     },
@@ -56,17 +56,17 @@ const Support = () => {
         {
           id: 1,
           title: 'How to sign in to Robinhood from a new device',
-          link: '/articles/how-to-sign-in-to-robinhood-from-a-new-device/',
+          link: '/articles/how-to-sign-in-to-robinhood-from-a-new-device',
         },
         {
           id: 2,
           title: 'Updating your notification settings',
-          link: '/articles/updating-your-notification-settings/',
+          link: '/articles/updating-your-notification-settings',
         },
         {
           id: 3,
           title: 'Getting familiar with your username',
-          link: '/articles/getting-familiar-with-your-username/',
+          link: '/articles/getting-familiar-with-your-username',
         },
       ],
     },
@@ -77,17 +77,17 @@ const Support = () => {
         {
           id: 1,
           title: 'What You Need to Get Started',
-          link: '/articles/what-you-need-to-get-started/',
+          link: '/articles/what-you-need-to-get-started',
         },
         {
           id: 2,
           title: 'Investments you can make on Robinhood',
-          link: '/articles/investments-you-can-make-on-robinhood/',
+          link: '/articles/investments-you-can-make-on-robinhood',
         },
         {
           id: 3,
           title: 'Open My Account',
-          link: '/articles/open-my-account/',
+          link: '/articles/open-my-account',
         },
       ],
     },
@@ -98,17 +98,17 @@ const Support = () => {
         {
           id: 1,
           title: 'What to know in light of Russia’s attack on Ukraine',
-          link: '/articles/russia-securities-sanctions/',
+          link: '/articles/russia-securities-sanctions',
         },
         {
           id: 2,
           title: 'Massachusetts State and Robinhood',
-          link: '/articles/massachusetts-state-and-robinhood/',
+          link: '/articles/massachusetts-state-and-robinhood',
         },
         {
           id: 3,
           title: 'November 3 data security incident',
-          link: '/articles/november-3-data-security-incident/',
+          link: '/articles/november-3-data-security-incident',
         },
       ],
     },
@@ -119,17 +119,17 @@ const Support = () => {
         {
           id: 1,
           title: 'How to sign in to Robinhood from a new device',
-          link: '/articles/how-to-sign-in-to-robinhood-from-a-new-device/',
+          link: '/articles/how-to-sign-in-to-robinhood-from-a-new-device',
         },
         {
           id: 2,
           title: 'Updating your notification settings',
-          link: '/articles/updating-your-notification-settings/',
+          link: '/articles/updating-your-notification-settings',
         },
         {
           id: 3,
           title: 'Getting familiar with your username',
-          link: '/articles/getting-familiar-with-your-username/',
+          link: '/articles/getting-familiar-with-your-username',
         },
       ],
     },
@@ -140,17 +140,17 @@ const Support = () => {
         {
           id: 1,
           title: 'What You Need to Get Started',
-          link: '/articles/what-you-need-to-get-started/',
+          link: '/articles/what-you-need-to-get-started',
         },
         {
           id: 2,
           title: 'Investments you can make on Robinhood',
-          link: '/articles/investments-you-can-make-on-robinhood/',
+          link: '/articles/investments-you-can-make-on-robinhood',
         },
         {
           id: 3,
           title: 'Open My Account',
-          link: '/articles/open-my-account/',
+          link: '/articles/open-my-account',
         },
       ],
     },
@@ -161,17 +161,17 @@ const Support = () => {
         {
           id: 1,
           title: 'What to know in light of Russia’s attack on Ukraine',
-          link: '/articles/russia-securities-sanctions/',
+          link: '/articles/russia-securities-sanctions',
         },
         {
           id: 2,
           title: 'Massachusetts State and Robinhood',
-          link: '/articles/massachusetts-state-and-robinhood/',
+          link: '/articles/massachusetts-state-and-robinhood',
         },
         {
           id: 3,
           title: 'November 3 data security incident',
-          link: '/articles/november-3-data-security-incident/',
+          link: '/articles/november-3-data-security-incident',
         },
       ],
     },
@@ -182,17 +182,17 @@ const Support = () => {
         {
           id: 1,
           title: 'How to sign in to Robinhood from a new device',
-          link: '/articles/how-to-sign-in-to-robinhood-from-a-new-device/',
+          link: '/articles/how-to-sign-in-to-robinhood-from-a-new-device',
         },
         {
           id: 2,
           title: 'Updating your notification settings',
-          link: '/articles/updating-your-notification-settings/',
+          link: '/articles/updating-your-notification-settings',
         },
         {
           id: 3,
           title: 'Getting familiar with your username',
-          link: '/articles/getting-familiar-with-your-username/',
+          link: '/articles/getting-familiar-with-your-username',
         },
       ],
     },
@@ -212,9 +212,6 @@ const Support = () => {
       ),
     }))
     setResult(data)
-
-    // result && console.log('Length of Result : ')
-    // result?.map((item) => item.links.map((el) => console.log(el.title.length)))
   }, [search])
 
   const handleClose = () => {
@@ -266,6 +263,7 @@ const Support = () => {
                         item.links.map((data, index) => (
                           <Link
                             href={`${data.link}`}
+                            query={data.link}
                             key={index}
                             className="w-full overflow-ellipsis"
                           >
