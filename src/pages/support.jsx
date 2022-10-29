@@ -201,22 +201,21 @@ const Support = () => {
   const [search, setSearch] = useState('')
   const [result, setResult] = useState('')
 
-  const getData = (search) => {
+  const handleChange = (e) => {
+    setSearch(e.target.value)
+  }
+
+  useEffect(() => {
     const data = supportLinks.map((item) => ({
       links: item.links.filter((child) =>
         child.title.toLowerCase().includes(search.toLowerCase())
       ),
     }))
     setResult(data)
-  }
 
-  const handleChange = (e) => {
-    setSearch(e.target.value)
-  }
-
-  useEffect(() => {
-    getData(search)
-  }, [search, getData])
+    result && console.log('Length of Result : ')
+    result?.map((item) => item.links.map((el) => console.log(el.title.length)))
+  }, [search])
 
   const handleClose = () => {
     setResult('')
@@ -233,7 +232,7 @@ const Support = () => {
             <h1 className="text-4xl font-bold">How can we help?</h1>
             <div className="group relative">
               <div
-                className={` ${
+                className={`${
                   result && search && 'bg-slate-100 shadow-xl'
                 } mt-5 flex max-w-screen-sm items-center ${
                   search && result
@@ -259,18 +258,29 @@ const Support = () => {
                   </span>
                 )}
               </div>
-              <div className="z-200 absolute max-h-[385px] w-[640px] overflow-hidden rounded-b-2xl bg-slate-50 shadow-xl">
-                {search &&
-                  result &&
-                  result.map((item) =>
-                    item.links.map((data, index) => (
-                      <Link href={`${data.link}`} key={index} className="">
-                        <p className="max-w-screen-sm cursor-pointer py-2 pl-4 text-lg text-gray-800 duration-200 hover:bg-slate-100 ">
-                          {data.title}
-                        </p>
-                      </Link>
-                    ))
-                  )}
+              <div className="absolute w-full">
+                <div className="max-h-[385px] max-w-screen-sm overflow-hidden rounded-b-2xl bg-slate-50 shadow-xl">
+                  {search &&
+                    (result.length > 1 ? (
+                      result.map((item) =>
+                        item.links.map((data, index) => (
+                          <Link
+                            href={`${data.link}`}
+                            key={index}
+                            className="w-full overflow-ellipsis"
+                          >
+                            <p className="cursor-pointer truncate py-2 px-4 text-lg text-gray-800 duration-200 hover:bg-slate-100 ">
+                              {data.title}
+                            </p>
+                          </Link>
+                        ))
+                      )
+                    ) : (
+                      <p className="py-2 px-4 text-lg text-gray-800">
+                        No result
+                      </p>
+                    ))}
+                </div>
               </div>
             </div>
           </div>

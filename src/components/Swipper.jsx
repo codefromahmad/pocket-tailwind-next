@@ -3,19 +3,10 @@ import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import img1 from '../images/Avatar_1.png'
 import img3 from '../images/Avatar_3.png'
-// import resolveConfig from 'tailwindcss/resolveConfig'
-// import tailwindConfig from '../../tailwind.config.js'
-
-// const fullConfig = resolveConfig(tailwindConfig)
-
-// console.log(fullConfig.theme.screens.md)
 
 // Import Swiper styles
 import 'swiper/swiper-bundle.min.css'
 import 'swiper/swiper.min.css'
-// import 'swiper/swiper-bundle.min.css'
-// import 'swiper/modules/pagination/pagination.min.css'
-// import 'swiper/modules/navigation/navigation.min.css'
 
 // import Swiper core and required modules
 import SwiperCore, { Pagination, Navigation } from 'swiper/core'

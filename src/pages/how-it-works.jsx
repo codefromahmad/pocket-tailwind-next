@@ -6,18 +6,12 @@ import { SecondFeatures } from '@/components/SecondFeatures'
 import CompareModels from '@/components/CompareModels'
 import { Header } from '@/components/Header'
 import Rules from '@/components/Rules'
-import { theme } from '../../tailwind.config'
 import Swipper from '@/components/Swipper'
 import { Footer } from '@/components/Footer'
 
 const HowItWorks = () => {
   let [activePeriod, setActivePeriod] = useState('FT9ja Classic')
   let [prevPeriod, setPrevPeriod] = useState('FT9ja Classic')
-
-  const breakpoints = theme
-
-  console.log('Breakpoints')
-  console.log(breakpoints)
 
   return (
     <>
@@ -30,7 +24,6 @@ const HowItWorks = () => {
             onChange={setActivePeriod}
             className="grid grid-cols-3 text-center"
           >
-            {console.log(prevPeriod + activePeriod)}
             <RadioGroup.Option
               value={'FT9ja Classic'}
               className={clsx(
