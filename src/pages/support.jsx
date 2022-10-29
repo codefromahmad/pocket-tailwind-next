@@ -213,8 +213,8 @@ const Support = () => {
     }))
     setResult(data)
 
-    result && console.log('Length of Result : ')
-    result?.map((item) => item.links.map((el) => console.log(el.title.length)))
+    // result && console.log('Length of Result : ')
+    // result?.map((item) => item.links.map((el) => console.log(el.title.length)))
   }, [search])
 
   const handleClose = () => {
