@@ -199,6 +199,7 @@ const Support = () => {
   ]
 
   const [search, setSearch] = useState('')
+  const [noResult, setNoResult] = useState(false)
   const [result, setResult] = useState('')
 
   const handleChange = (e) => {
@@ -206,17 +207,34 @@ const Support = () => {
   }
 
   useEffect(() => {
-    const data = supportLinks.map((item) => ({
-      links: item.links.filter((child) =>
-        child.title.toLowerCase().includes(search.toLowerCase())
-      ),
-    }))
-    setResult(data)
+    setNoResult(false)
+    if (search) {
+      const data = supportLinks.map((item) =>
+        item.links.filter((child) =>
+          child.title.toLowerCase().includes(search.toLowerCase())
+        )
+      )
+      setResult(data)
+    }
   }, [search])
+
+  useEffect(() => {
+    if (search) {
+      if (result) {
+        setNoResult(false)
+        const i = 0
+        result.map((item) => (i += item.length))
+        if (i === 0) setNoResult(true)
+      }
+    } else {
+      setNoResult(false)
+    }
+  }, [result])
 
   const handleClose = () => {
     setResult('')
     setSearch('')
+    setNoResult(false)
   }
 
   return (
@@ -258,26 +276,26 @@ const Support = () => {
               <div className="absolute w-full">
                 <div className="max-h-[385px] max-w-screen-sm overflow-hidden rounded-b-2xl bg-slate-50 shadow-xl">
                   {search &&
-                    (result.length > 1 ? (
-                      result.map((item) =>
-                        item.links.map((data, index) => (
-                          <Link
-                            href={`${data.link}`}
-                            query={data.link}
-                            key={index}
-                            className="w-full overflow-ellipsis"
-                          >
-                            <p className="cursor-pointer truncate py-2 px-4 text-lg text-gray-800 duration-200 hover:bg-slate-100 ">
-                              {data.title}
-                            </p>
-                          </Link>
-                        ))
-                      )
-                    ) : (
-                      <p className="py-2 px-4 text-lg text-gray-800">
-                        No result
-                      </p>
-                    ))}
+                    result &&
+                    result.map((item) =>
+                      item.map((data, index) => (
+                        <Link
+                          href={`${data.link}`}
+                          query={data.link}
+                          key={index}
+                          className="w-full overflow-ellipsis"
+                        >
+                          <p className="cursor-pointer truncate py-2 px-4 text-lg text-gray-800 duration-200 hover:bg-slate-100 ">
+                            {data.title}
+                          </p>
+                        </Link>
+                      ))
+                    )}
+                  {noResult && (
+                    <p className="py-2 px-4 text-lg text-gray-800">
+                      No results.
+                    </p>
+                  )}
                 </div>
               </div>
             </div>

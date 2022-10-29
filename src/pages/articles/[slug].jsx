@@ -238,18 +238,14 @@ const Faq = () => {
       } else {
         linkData = localStorage.getItem('linkData')
       }
-      console.log('On changing of link inside Sigle FAQ')
-      console.log('Here it is : ' + link)
       const data = supportLinks.map((item) =>
         item.links.filter((i) => i.link === link)
       )
       data.map((item) => item.map((i) => setAnswer(i)))
-      console.log(answer)
     }
   }, [link])
 
   useEffect(() => {
-    console.log('First Time rendering')
     const linkData = ''
 
     if (router.asPath != '/articles/[slug]') {
@@ -258,13 +254,11 @@ const Faq = () => {
     } else {
       linkData = localStorage.getItem('linkData')
     }
-    console.log('Here is the link : ' + linkData.replaceAll('"', ''))
 
     const data = supportLinks.map((item) =>
       item.links.filter((i) => i.link === linkData.replaceAll('"', ''))
     )
     data.map((item) => item.map((i) => setAnswer(i)))
-    console.log(answer)
   }, [])
 
   return (
