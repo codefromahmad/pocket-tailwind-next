@@ -18,14 +18,14 @@ export function Footer() {
             <Image src={logo} alt="alsdkjf" />
             <div className="ml-2">
               <p className="mt-1 text-sm">
-                We are Nigeria's 1st next-generational proprietary trading firm.
-                Our aim is to scout for talented but undercapitalized
-                Financial-asset Traders in Nigeria (FT9ja) and empower them.
-                They trade with our funds, and we split the profit. It’s really
-                a win-win! We want to see retail Traders succeed. Trade with
-                peace of mind by trading with our money. Get rid of the fear of
-                losing your money as well as the problems of trading a small
-                account size.
+                We are Nigeria`&apos;`s 1st next-generational proprietary
+                trading firm. Our aim is to scout for talented but
+                undercapitalized Financial-asset Traders in Nigeria (FT9ja) and
+                empower them. They trade with our funds, and we split the
+                profit. It’s really a win-win! We want to see retail Traders
+                succeed. Trade with peace of mind by trading with our money. Get
+                rid of the fear of losing your money as well as the problems of
+                trading a small account size.
               </p>
             </div>
           </div>
@@ -84,13 +84,7 @@ export function Footer() {
               </Link>
             </div>
           </div>
-          {/* {router.pathname === '/' && (
-              <nav className="mt-11 flex gap-8">
-                <NavLinks />
-              </nav>
-            )} */}
         </div>
-
         <div className="flex flex-col items-center border-t border-gray-200 px-5 pt-8 pb-12 md:px-10 md:pt-6">
           <div className="flex py-3 md:py-5">
             <a
@@ -117,11 +111,17 @@ export function Footer() {
           </div>
           <p className="mt-6 text-sm text-gray-500 md:mt-0">
             All right reserved &copy; 2022 FT9ja -{' '}
-            <a href="https://docs.google.com/document/d/1kn0WYZko52qc5-ju8l6jl1kj1AfBNqc7eHVuDczzagQ/">
+            <a
+              className="duration-200 hover:underline"
+              href="https://docs.google.com/document/d/1kn0WYZko52qc5-ju8l6jl1kj1AfBNqc7eHVuDczzagQ/"
+            >
               Terms & Conditions
             </a>{' '}
             and{' '}
-            <a href="https://docs.google.com/document/d/1_Avh3t3fzpju1ZHB6MfBLqjjC0iuLfPMm8CfY1lQXKo/">
+            <a
+              className="duration-200 hover:underline"
+              href="https://docs.google.com/document/d/1_Avh3t3fzpju1ZHB6MfBLqjjC0iuLfPMm8CfY1lQXKo/"
+            >
               Privacy
             </a>
           </p>

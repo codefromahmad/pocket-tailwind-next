@@ -16,6 +16,7 @@ import logoForbes from '@/images/logos/forbes.svg'
 import logoHuffpost from '@/images/logos/huffpost.svg'
 import logoTechcrunch from '@/images/logos/techcrunch.svg'
 import logoWired from '@/images/logos/wired.svg'
+import Link from 'next/link'
 
 function BackgroundIllustration(props) {
   let id = useId()
@@ -341,24 +342,22 @@ export function Hero() {
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
           <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
             <h1 className="text-4xl font-medium tracking-tight text-gray-900">
-              Invest at the perfect time.
+              Every Trader deserves a chance to be successful
             </h1>
             <p className="mt-6 text-lg text-gray-600">
-              By leveraging insights from our network of industry insiders,
-              you’ll know exactly when to buy to maximize profit, and exactly
-              when to sell to avoid painful losses.
+              Trade up to $50,000 of our company's capital and get paid up to
+              80% of the profit weekly or monthly. No challenges. No risk for
+              you, we take the losses. Join the team of our successful Traders
+              now.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
-              <AppStoreLink />
-              <Button
-                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                variant="outline"
-              >
-                <span className="inline-flex cursor-pointer justify-center rounded-lg border border-gray-300 py-[calc(theme(spacing.2)-1px)] px-[calc(theme(spacing.3)-1px)] text-sm text-gray-700 outline-2 outline-offset-2 transition-colors hover:border-gray-400 active:bg-gray-100 active:text-gray-700/80">
-                  <PlayIcon className="h-6 w-6 flex-none" />
-                  <span className="ml-2.5">Watch the video</span>
-                </span>
-              </Button>
+              <div className="text-center md:text-left">
+                <Link href="https://temp-app-pockettailwind.herokuapp.com/#pricing">
+                  <a className="rounded-lg bg-black py-4 px-8 text-lg text-white duration-300 hover:bg-gray-800">
+                    Start Trading
+                  </a>
+                </Link>
+              </div>
             </div>
           </div>
           <div className="relative mt-10 sm:mt-20 lg:col-span-5 lg:row-span-2 lg:mt-0 xl:col-span-6">
@@ -369,7 +368,7 @@ export function Hero() {
               </PhoneFrame>
             </div>
           </div>
-          <div className="relative -mt-4 lg:col-span-7 lg:mt-0 xl:col-span-6">
+          {/* <div className="relative -mt-4 lg:col-span-7 lg:mt-0 xl:col-span-6">
             <p className="text-center text-sm font-semibold text-gray-900 lg:text-left">
               As featured in
             </p>
@@ -392,7 +391,7 @@ export function Hero() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
         </div>
       </Container>
     </div>

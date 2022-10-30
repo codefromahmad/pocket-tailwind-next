@@ -3,57 +3,97 @@ import Link from 'next/link'
 import { Container } from '@/components/Container'
 
 const faqs = [
-  [
-    {
-      question: 'How do I know the tips are good?',
-      answer:
-        'Our whole business depends on our tips being good, so it’s in our best interest that they are. The results of our customers speak for themselves, just trust us.',
-    },
-    {
-      question: 'Isn’t this insider trading?',
-      answer:
-        'Yes exactly. But at scale! Historically you could only make insider trades with knowledge from your direct network. Pocket brings you insider trading tips from people you don’t even know.',
-    },
-    {
-      question: 'But isn’t insider trading illegal?',
-      answer:
-        'Here’s the thing: you’re the one doing the insider trading, not us. We’re just giving you the tips and some tools to make trades. We’re not doing anything wrong here.',
-    },
-  ],
-  [
-    {
-      question: 'Do the people giving you tips realize what they are doing?',
-      answer:
-        'Again I would argue this isn’t really our responsibility. People make their own choices. If they don’t research the consequences that’s on them, not on us.',
-    },
-    {
-      question: 'Where is Pocket based?',
-      answer:
-        'Let’s just say it’s not somewhere where the SEC is going to find us.',
-    },
-    {
-      question: 'Is there any age limit to trading on Pocket?',
-      answer:
-        'For our free plan, the age limit is based on the minimum age to trade in your country of residence. Our VIP plan uses advanced transaction anonymization though, so you can use that plan even if you’re 9 years old. Or a dog.',
-    },
-  ],
-  [
-    {
-      question: 'How did you get this on the App Store?',
-      answer:
-        'Honestly we were surprised too, but eventually we found out that the app reviewer found the app so compelling they approved it just so they could use it themselves.',
-    },
-    {
-      question: 'How do I explain the money I withdraw from Pocket to the IRS?',
-      answer:
-        'This feels like one-hundred percent a you problem. Pocket is not responsible in any way for your tax returns.',
-    },
-    {
-      question: 'How do I become an insider?',
-      answer:
-        'Contact us with some details about your industry and the type of access you have to apply for an insider account. Once approved, we’ll send you a guide on collecting insider information without being detected at work.',
-    },
-  ],
+  {
+    id: 1,
+    question: 'How does this work?',
+    list: '',
+    answer:
+      'Our whole business depends on our tips being good, so it’s in our best interest that they are. The results of our customers speak for themselves, just trust us.',
+  },
+  {
+    id: 2,
+    question: 'What are the rules?',
+    answer: '',
+    list: [
+      {
+        id: 1,
+        title: 'Maximum Daily Drawdown limit: 5%.',
+      },
+      {
+        id: 2,
+        title: 'Account DrawDown Limit: 10%.',
+      },
+      {
+        id: 3,
+        title: 'Minimum Trading Days: 2 days a week and 10 days a month.',
+      },
+    ],
+  },
+  {
+    id: 3,
+    question: 'What is the Zuma Account?',
+    list: '',
+    answer: `Every Trader starts with a ZumaRock Account. ZumaRock Accounts are the gateway to AsoRock Accounts. Although ZumaRock Accounts are demo accounts, you still get paid 5% weekly or 10% monthly on the profit you make! That's the Talent Bonus.`,
+  },
+  {
+    id: 4,
+    question: 'What is the Aso Account?',
+    answer: '',
+    list: [
+      {
+        id: 1,
+        title:
+          'Aso Accounts are live accounts successful Zuma Account Traders are eligible for by positively growing their accounts to 25% over time (no time limits). Aso Account Traders are FT9ja Traders! They are Traders that have proven to be in the league of the best Traders in Nigeria. Aso Account Traders get paid up to 80% of the profit.',
+      },
+      {
+        id: 2,
+        title:
+          'Account can be compounded to 2X of the original Account Size. For example, a $25,000 account can be compounded to up to $50,000.',
+      },
+    ],
+  },
+  {
+    id: 5,
+    question: 'Are you a Broker?',
+    answer: '',
+    list: [
+      {
+        id: 1,
+        title: `No, we are not.`,
+      },
+      {
+        id: 2,
+        title: `We have accounts with third-party Brokers which we give our Traders access to.`,
+      },
+    ],
+  },
+  {
+    id: 6,
+    question: 'Is this an investment offer?',
+    answer: '',
+    list: [
+      {
+        id: 1,
+        title: `No. You are not “investing” any money into our company or into any trading account.`,
+      },
+      {
+        id: 2,
+        title: `At FT9ja, we invest our funds into talented, profitable, and reliable Traders. We discover our AsoRock Traders by onboarding them through ZumaRock Account which is a simulated/demo trading account. Traders get paid even during the onboarding period!`,
+      },
+    ],
+  },
+  {
+    id: 7,
+    list: '',
+    question: 'Will I be responsible for losses?',
+    answer: 'No! We cover the losses.',
+  },
+  {
+    id: 8,
+    list: '',
+    question: 'Which Brokers do you offer?',
+    answer: 'You can choose between IC Markets, FXTM, and Deriv.',
+  },
 ]
 
 export function Faqs() {
@@ -74,33 +114,30 @@ export function Faqs() {
           <p className="mt-2 text-lg text-gray-600">
             If you have anything else you want to ask,{' '}
             <Link
-              href="mailto:info@example.com"
+              href="mailto:info@ft9ja.com"
               className="text-gray-900 underline"
             >
               reach out to us
             </Link>
-            .
           </p>
         </div>
-        <ul
-          role="list"
-          className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 sm:mt-20 lg:max-w-none lg:grid-cols-3"
-        >
-          {faqs.map((column, columnIndex) => (
-            <li key={columnIndex}>
-              <ul role="list" className="space-y-10">
-                {column.map((faq, faqIndex) => (
-                  <li key={faqIndex}>
-                    <h3 className="text-lg font-semibold leading-6 text-gray-900">
-                      {faq.question}
-                    </h3>
-                    <p className="mt-4 text-sm text-gray-700">{faq.answer}</p>
+        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-10 sm:mt-20 md:grid-cols-2 lg:max-w-none lg:grid-cols-3">
+          {faqs.map(({ id, question, answer, list }) => (
+            <div key={id}>
+              <p className="text-lg font-semibold leading-6 text-gray-900">
+                {question}
+              </p>
+              {answer && <p className="mt-4 text-sm text-gray-700">{answer}</p>}
+
+              {list &&
+                list.map(({ id, title }) => (
+                  <li className="mt-4 text-sm text-gray-700" key={id}>
+                    {title}
                   </li>
                 ))}
-              </ul>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </Container>
     </section>
   )

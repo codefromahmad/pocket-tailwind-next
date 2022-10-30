@@ -4,40 +4,23 @@ import { Container } from '@/components/Container'
 
 const features = [
   {
-    name: 'Invest any amount',
+    name: 'Sign up',
     description:
-      'Whether it’s $1 or $1,000,000, we can put your money to work for you.',
+      'We provide three account sizes for Traders to start with: $3,000, $5,000 and $25,000. Choose your account size, select a broker, and you’ll receive login details to a ZumaRock AccountTM within 24 hours of purchase! This is the account you’ll begin trading. ',
+    link: 'https://docs.google.com/presentation/d/10Jc1VAjgV9nLSjCVYcQXe11DBks1GvMoc5Fqzaivyu0/edit?usp=sharing',
     icon: DeviceArrowIcon,
   },
   {
-    name: 'Build a balanced portfolio',
+    name: 'Start Trading',
     description:
-      'Invest in different industries to find the most opportunities to win huge.',
+      'Trade the Zuma Account and receive payouts as soon as 10 days. Choose between 5% weekly or 10% monthly Talent Bonus. When you grow your Zuma Account to 25% (no time limit), you move to the Aso Account and you start earning up to 80% Profit Split. Just abide by the rules. See our rules here.',
     icon: DeviceCardsIcon,
   },
   {
-    name: 'Trade in real-time',
+    name: 'Get Paid',
     description:
-      'Get insider tips on big stock moves and act on them within seconds.',
+      'You choose your medium of getting paid: bank account or Paypal. You choose between weekly or monthly payouts. It is as simple as this getting paid with FT9ja!',
     icon: DeviceClockIcon,
-  },
-  {
-    name: 'Profit from your network',
-    description:
-      'Invite new insiders to get tips faster and beat even other Pocket users.',
-    icon: DeviceListIcon,
-  },
-  {
-    name: 'Encrypted and anonymized',
-    description:
-      'Cutting-edge security technology that even the NSA doesn’t know about keeps you hidden.',
-    icon: DeviceLockIcon,
-  },
-  {
-    name: 'Portfolio tracking',
-    description:
-      'Watch your investments grow exponentially, leaving other investors in the dust.',
-    icon: DeviceChartIcon,
   },
 ]
 
@@ -196,12 +179,8 @@ export function SecondaryFeatures() {
       <Container>
         <div className="mx-auto max-w-2xl sm:text-center">
           <h2 className="text-3xl font-medium tracking-tight text-gray-900">
-            Now is the time to build your portfolio.
+            How It Works?
           </h2>
-          <p className="mt-2 text-lg text-gray-600">
-            With typical market returns, you have to start young to secure your
-            future. With Pocket, it’s never too late to build your nest egg.
-          </p>
         </div>
         <ul
           role="list"
@@ -216,7 +195,14 @@ export function SecondaryFeatures() {
               <h3 className="mt-6 font-semibold text-gray-900">
                 {feature.name}
               </h3>
-              <p className="mt-2 text-gray-700">{feature.description}</p>
+              <p className="mt-2 text-gray-700">
+                {feature.description}
+                {feature.link && (
+                  <a className="text-green-600" href={feature.link}>
+                    Learn more
+                  </a>
+                )}
+              </p>
             </li>
           ))}
         </ul>
