@@ -6,6 +6,8 @@ import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLinks } from '@/components/NavLinks'
 import { useRouter } from 'next/router'
+import logo from '../images/logo.png'
+import Image from 'next/future/image'
 
 function MenuIcon(props) {
   return (
@@ -48,18 +50,18 @@ function MobileNavLink({ children, ...props }) {
 export function Header() {
   const router = useRouter()
   return (
-    <header>
+    <header className="bg-white">
       <nav>
         <Container className="relative z-50 flex justify-between py-8">
           <div className="relative z-10 flex items-center gap-16">
             <Link href="/" aria-label="Home">
-              <Logo className="h-10 w-auto" />
+              <Image src={logo} alt="alsdkjf" />
             </Link>
-            {router.pathname === '/' && (
+            {/* {router.pathname === '/' && (
               <div className="hidden lg:flex lg:gap-10">
                 <NavLinks />
               </div>
-            )}
+            )} */}
           </div>
           <div className="flex items-center gap-6">
             <Popover className="lg:hidden">
@@ -98,7 +100,7 @@ export function Header() {
                             y: -32,
                             transition: { duration: 0.2 },
                           }}
-                          className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-gray-50 px-6 pb-6 pt-16 shadow-2xl shadow-gray-900/20"
+                          className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-white px-6 pb-6 pt-16 shadow-2xl shadow-gray-900/20"
                         >
                           {/* {router.pathname === '/' && (
                             <div className="flex flex-col space-y-4">

@@ -80,12 +80,7 @@ const HowItWorks = () => {
       {activePeriod === 'FT9ja Challenge' && <SecondFeatures />}
       {activePeriod === 'Compare Models' && <CompareModels />}
       <Rules />
-      <div className="mx-auto max-w-screen-md py-10 px-5 sm:px-10">
-        <h1 className="pb-5 text-center text-3xl font-bold sm:text-left">
-          Meet Sam
-        </h1>
-        <Swipper />
-      </div>
+      <Swipper />
       <Footer />
     </>
   )

@@ -241,7 +241,7 @@ const Support = () => {
     <div>
       <Header />
       <div className="w-full" onClick={handleClose}>
-        <div className="mx-auto max-w-screen-lg px-5">
+        <div className="mx-auto max-w-screen-lg py-5 px-5">
           <div>
             <h1 className="text-4xl font-bold">Hello!</h1>
             <h1 className="text-4xl font-bold">How can we help?</h1>

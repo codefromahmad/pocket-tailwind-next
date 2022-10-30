@@ -1,83 +1,129 @@
 import Image from 'next/future/image'
 import Link from 'next/link'
 
-import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import { TextField } from '@/components/Fields'
-import { Logomark } from '@/components/Logo'
 import { NavLinks } from '@/components/NavLinks'
-import qrCode from '@/images/qr-code.svg'
 import { useRouter } from 'next/router'
-
-function QrCodeBorder(props) {
-  return (
-    <svg viewBox="0 0 96 96" fill="none" aria-hidden="true" {...props}>
-      <path
-        d="M1 17V9a8 8 0 0 1 8-8h8M95 17V9a8 8 0 0 0-8-8h-8M1 79v8a8 8 0 0 0 8 8h8M95 79v8a8 8 0 0 1-8 8h-8"
-        strokeWidth="2"
-        strokeLinecap="round"
-      />
-    </svg>
-  )
-}
+import logo from '../images/logo.png'
+import { ImFacebook, ImTwitter, ImYoutube } from 'react-icons/im'
+import { GrInstagram } from 'react-icons/gr'
 
 export function Footer() {
   const router = useRouter()
   return (
-    <footer className="border-t border-gray-200">
+    <footer className="bg-white">
       <Container>
-        <div className="flex flex-col items-start justify-between gap-y-12 pt-16 pb-6 lg:flex-row lg:items-center lg:py-16">
-          <div>
-            <div className="flex items-center text-gray-900">
-              <Logomark className="h-10 w-10 flex-none fill-cyan-500" />
-              <div className="ml-4">
-                <p className="text-base font-semibold">Pocket</p>
-                <p className="mt-1 text-sm">Invest at the perfect time.</p>
-              </div>
+        <div className="mx-auto grid max-w-[425px] grid-cols-1 gap-8 pt-14 pb-8 md:max-w-screen-lg md:grid-cols-3 lg:py-16">
+          <div className="flex   flex-col text-gray-900">
+            <Image src={logo} alt="alsdkjf" />
+            <div className="ml-2">
+              <p className="mt-1 text-sm">
+                We are Nigeria's 1st next-generational proprietary trading firm.
+                Our aim is to scout for talented but undercapitalized
+                Financial-asset Traders in Nigeria (FT9ja) and empower them.
+                They trade with our funds, and we split the profit. It’s really
+                a win-win! We want to see retail Traders succeed. Trade with
+                peace of mind by trading with our money. Get rid of the fear of
+                losing your money as well as the problems of trading a small
+                account size.
+              </p>
             </div>
-            {router.pathname === '/' && (
+          </div>
+          <div className="flex flex-col">
+            <h1 className="mb-4 text-center text-2xl font-bold md:text-left">
+              Contact Us
+            </h1>
+            <div>
+              <p className="text-center md:text-left">
+                <span className="font-bold">Email: </span>
+                <a className="text-green-600" href="mailto:info@ft9ja.com">
+                  info@ft9ja.com
+                </a>
+              </p>
+              <p className="text-center md:text-left">
+                {' '}
+                <span className="font-bold">Whatsapp Number: </span>
+                +2348138462394
+              </p>
+              <p className="text-center text-sm md:text-left">
+                Mon to Fri - 9am to 5pm WAT
+              </p>
+              <p className="text-center md:text-left">
+                Abuja: 18, Queen Elizabeth Street, Asokoro
+              </p>
+              <p className="text-center md:text-left">
+                <a
+                  className="text-sm text-green-600"
+                  href="https://calendly.com/ft9ja-lagos"
+                >
+                  (Appointments only)
+                </a>
+              </p>
+              <p className="text-center md:text-left">
+                Lagos: 362 Herbert Macaulay Way, Yaba
+              </p>
+              <p className="text-center md:text-left">
+                <a
+                  className="text-sm  text-green-600"
+                  href="https://calendly.com/ft9ja-lagos"
+                >
+                  (Appointments only)
+                </a>
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col">
+            <h1 className="mb-8 text-center text-2xl font-bold md:text-left">
+              Apply Online
+            </h1>
+            <div className="text-center md:text-left">
+              <Link href="https://temp-app-pockettailwind.herokuapp.com/#pricing">
+                <a className="rounded-lg bg-black py-4 px-8 text-xl text-white duration-300 hover:bg-gray-800 md:px-10 md:py-5">
+                  Start Trading
+                </a>
+              </Link>
+            </div>
+          </div>
+          {/* {router.pathname === '/' && (
               <nav className="mt-11 flex gap-8">
                 <NavLinks />
               </nav>
-            )}
-          </div>
-          <div className="group relative -mx-4 flex items-center self-stretch p-4 transition-colors hover:bg-gray-100 sm:self-auto sm:rounded-2xl lg:mx-0 lg:self-auto lg:p-6">
-            <div className="relative flex h-24 w-24 flex-none items-center justify-center">
-              <QrCodeBorder className="absolute inset-0 h-full w-full stroke-gray-300 transition-colors group-hover:stroke-cyan-500" />
-              <Image src={qrCode} alt="" unoptimized />
-            </div>
-            <div className="ml-8 lg:w-64">
-              <p className="text-base font-semibold text-gray-900">
-                <Link href="#">
-                  <>
-                    <span className="absolute inset-0 sm:rounded-2xl" />
-                    Download the app
-                  </>
-                </Link>
-              </p>
-              <p className="mt-1 text-sm text-gray-700">
-                Scan the QR code to download the app from the App Store.
-              </p>
-            </div>
-          </div>
+            )} */}
         </div>
-        <div className="flex flex-col items-center border-t border-gray-200 pt-8 pb-12 md:flex-row-reverse md:justify-between md:pt-6">
-          <form className="flex w-full justify-center md:w-auto">
-            <TextField
-              type="email"
-              aria-label="Email address"
-              placeholder="Email address"
-              autoComplete="email"
-              required
-              className="w-60 min-w-0 shrink"
-            />
-            <Button type="submit" color="cyan" className="ml-4 flex-none">
-              <span className="hidden lg:inline">Join our newsletter</span>
-              <span className="lg:hidden">Join newsletter</span>
-            </Button>
-          </form>
+
+        <div className="flex flex-col items-center border-t border-gray-200 px-5 pt-8 pb-12 md:px-10 md:pt-6">
+          <div className="flex py-3 md:py-5">
+            <a
+              href="https://facebook.com/FT9ja-101059375510372/"
+              className="px-4"
+            >
+              <ImFacebook className="text-2xl" />
+            </a>
+            <a
+              href="https://www.instagram.com/ft9ja.official/"
+              className="px-4"
+            >
+              <GrInstagram className="text-2xl" />
+            </a>
+            <a href="https://twitter.com/ft9ja_official" className="px-4">
+              <ImTwitter className="text-2xl" />
+            </a>
+            <a
+              href="https://www.youtube.com/channel/UCM3RtiMpxAQ3pNUnvUP9xcw"
+              className="px-4"
+            >
+              <ImYoutube className="text-2xl" />
+            </a>
+          </div>
           <p className="mt-6 text-sm text-gray-500 md:mt-0">
-            &copy; Copyright {new Date().getFullYear()}. All rights reserved.
+            All right reserved &copy; 2022 FT9ja -{' '}
+            <a href="https://docs.google.com/document/d/1kn0WYZko52qc5-ju8l6jl1kj1AfBNqc7eHVuDczzagQ/">
+              Terms & Conditions
+            </a>{' '}
+            and{' '}
+            <a href="https://docs.google.com/document/d/1_Avh3t3fzpju1ZHB6MfBLqjjC0iuLfPMm8CfY1lQXKo/">
+              Privacy
+            </a>
           </p>
         </div>
       </Container>
