@@ -345,10 +345,10 @@ export function Hero() {
               Every Trader deserves a chance to be successful
             </h1>
             <p className="mt-6 text-lg text-gray-600">
-              Trade up to $50,000 of our company's capital and get paid up to
-              80% of the profit weekly or monthly. No challenges. No risk for
-              you, we take the losses. Join the team of our successful Traders
-              now.
+              Trade up to $50,000 of our company`&apos;`s capital and get paid
+              up to 80% of the profit weekly or monthly. No challenges. No risk
+              for you, we take the losses. Join the team of our successful
+              Traders now.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
               <div className="text-center md:text-left">
