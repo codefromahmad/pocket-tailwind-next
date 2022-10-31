@@ -104,7 +104,7 @@ export function Faqs() {
       className="border-t border-gray-200 py-20 sm:py-32"
     >
       <Container>
-        <div className="mx-auto max-w-2xl lg:mx-0">
+        <div className="mx-auto lg:max-w-screen-md">
           <h2
             id="faqs-title"
             className="text-3xl font-medium tracking-tight text-gray-900"
@@ -121,7 +121,7 @@ export function Faqs() {
             </Link>
           </p>
         </div>
-        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-10 sm:mt-20 md:grid-cols-2 lg:max-w-none lg:grid-cols-3">
+        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-10 sm:mt-20 lg:max-w-screen-md">
           {faqs.map(({ id, question, answer, list }) => (
             <div key={id}>
               <p className="text-lg font-semibold leading-6 text-gray-900">
