@@ -1,6 +1,9 @@
 import Link from 'next/link'
-
 import { Container } from '@/components/Container'
+import { Disclosure, Transition } from '@headlessui/react'
+import { BiMinus } from 'react-icons/bi'
+import { BsPlusLg } from 'react-icons/bs'
+import { useRef } from 'react'
 
 const faqs = [
   {
@@ -97,6 +100,21 @@ const faqs = [
 ]
 
 export function Faqs() {
+  const buttonRefs = useRef([])
+  const openedRef = useRef(null)
+
+  const clickRecent = (index) => {
+    const clickedButton = buttonRefs.current[index]
+    if (clickedButton === openedRef.current) {
+      openedRef.current = null
+      return
+    }
+    if (Boolean(openedRef.current?.getAttribute('data-value'))) {
+      openedRef.current?.click()
+    }
+    openedRef.current = clickedButton
+  }
+
   return (
     <section
       id="faqs"
@@ -104,7 +122,7 @@ export function Faqs() {
       className="border-t border-gray-200 py-20 sm:py-32"
     >
       <Container>
-        <div className="mx-auto lg:max-w-screen-md">
+        <div className="mx-auto pb-10 lg:max-w-screen-md">
           <h2
             id="faqs-title"
             className="text-3xl font-medium tracking-tight text-gray-900"
@@ -121,21 +139,65 @@ export function Faqs() {
             </Link>
           </p>
         </div>
-        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-10 sm:mt-20 lg:max-w-screen-md">
-          {faqs.map(({ id, question, answer, list }) => (
-            <div key={id}>
-              <p className="text-lg font-semibold leading-6 text-gray-900">
-                {question}
-              </p>
-              {answer && <p className="mt-4 text-sm text-gray-700">{answer}</p>}
-
-              {list &&
-                list.map(({ id, title }) => (
-                  <li className="mt-4 text-sm text-gray-700" key={id}>
-                    {title}
-                  </li>
-                ))}
-            </div>
+        <div className="mx-auto grid grid-cols-1 gap-5 lg:max-w-screen-md">
+          {faqs.map(({ id, question, list, answer }, idx) => (
+            <Disclosure key={id}>
+              {({ open }) => (
+                <>
+                  <div key={id}>
+                    <Disclosure.Button
+                      as="div"
+                      className="text-md mb-3 w-full cursor-pointer rounded-lg text-left font-bold"
+                    >
+                      <button
+                      className='flex justify-between w-full'
+                        data-value={open}
+                        ref={(ref) => {
+                          buttonRefs.current[idx] = ref
+                        }}
+                        onClick={() => clickRecent(idx)}
+                      >
+                        {question}
+                        {open ? (
+                          <span className="rounded-full border-[1px] border-slate-300 p-1.5">
+                            <BiMinus />
+                          </span>
+                        ) : (
+                          <span className="rounded-full border-[1px] border-slate-300 p-1.5">
+                            <BsPlusLg />
+                          </span>
+                        )}
+                      </button>
+                    </Disclosure.Button>
+                    <Transition
+                      show={open}
+                      enter="transition duration-100 ease-out"
+                      enterFrom="transform scale-95 opacity-0"
+                      enterTo="transform scale-100 opacity-100"
+                      leave="transition duration-75 ease-out"
+                      leaveFrom="transform scale-100 opacity-100"
+                      leaveTo="transform scale-95 opacity-0"
+                    >
+                      {open && (
+                        <Disclosure.Panel
+                          static
+                          className="my-2 flex w-full justify-between rounded-lg text-left"
+                        >
+                          {answer && answer}
+                          {list && (
+                            <ul>
+                              {list.map(({ id, title }) => (
+                                <li key={id}>{title}</li>
+                              ))}
+                            </ul>
+                          )}
+                        </Disclosure.Panel>
+                      )}
+                    </Transition>
+                  </div>
+                </>
+              )}
+            </Disclosure>
           ))}
         </div>
       </Container>

@@ -24,23 +24,25 @@ const MotionAppScreenBody = motion(AppScreen.Body)
 
 const features = [
   {
-    name: 'Invite friends for better returns',
-    description:
-      'For every friend you invite to Pocket, you get insider notifications 5 seconds sooner. And it’s 10 seconds if you invite an insider.',
+    name: 'Sign up',
+    description: `Signing up takes less that a minute. Choose between FT9ja Classic and the Traditional Challenge Funding Model, Select an Account Size and start trading within 24 hours`,
     icon: DeviceUserIcon,
     screen: InviteScreen,
   },
   {
-    name: 'Notifications on stock dips',
-    description:
-      'Get a push notification every time we find out something that’s going to lower the share price on your holdings so you can sell before the information hits the public markets.',
+    name: 'Start Trading',
+    description: `FT9ja Traders get paid up to 80% Profit Split. What's more, FT9ja
+    Classic Traders gets paid up to 10% even during the evaluation
+    (Talent Bonus). Always remember to trade within our <guidelines>.
+    `,
     icon: DeviceNotificationIcon,
     screen: StocksScreen,
   },
   {
-    name: 'Invest what you want',
-    description:
-      'We hide your stock purchases behind thousands of anonymous trading accounts, so suspicious activity can never be traced back to you.',
+    name: 'Start Earning',
+    description: `You choose your medium of getting paid: bank account or
+    Paypal. You choose between weekly or monthly payouts. It is as
+    simple as this getting paid with FT9ja!`,
     icon: DeviceTouchIcon,
     screen: InvestScreen,
   },
@@ -561,17 +563,16 @@ export function PrimaryFeatures() {
     >
       <motion.div {...Animations}>
         <Container>
-          {/* <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-3xl">
-          <h2 className="text-3xl font-medium tracking-tight text-white">
-            Every feature you need to win. Try it for yourself.
-          </h2>
-          <p className="mt-2 text-lg text-gray-400">
-            Pocket was built for investors like you who play by their own rules
-            and aren’t going to let SEC regulations get in the way of their
-            dreams. If other investing tools are afraid to build it, Pocket has
-            it.
-          </p>
-        </div> */}
+          <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-3xl">
+            <h2 className="text-3xl font-medium tracking-tight text-white">
+              How It Works?
+            </h2>
+            <p className="mt-2 text-lg text-gray-400">
+              We believe you have what it takes to be successful. Sign up for a
+              funding model, choose an account size, and start trading to earn
+              as soon as 10 days.
+            </p>
+          </div>
         </Container>
         <div className="mt-16 md:hidden">
           <FeaturesMobile />

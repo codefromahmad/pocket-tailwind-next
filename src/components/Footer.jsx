@@ -12,7 +12,7 @@ export function Footer() {
   return (
     <footer className="bg-white">
       <Container>
-        <div className="mx-auto grid max-w-[425px] grid-cols-1 gap-10 pt-14 pb-8 md:max-w-screen-2xl md:grid-cols-3 lg:py-10">
+        <div className="mx-auto grid max-w-[425px] grid-cols-1 md:gap-10 pt-14 pb-8 md:max-w-screen-2xl md:grid-cols-3 lg:gap-20 lg:py-10">
           <div className="flex   flex-col text-gray-900">
             <Image src={logo} alt="alsdkjf" />
             <div className="ml-2">
@@ -28,8 +28,8 @@ export function Footer() {
               </p>
             </div>
           </div>
-          <div className="flex flex-col">
-            <h1 className="mb-4 font-bold text-center text-2xl md:text-left">
+          <div className="flex py-10 md:py-0 flex-col">
+            <h1 className="mb-4 text-center text-2xl font-bold md:text-left">
               Contact Us
             </h1>
             <div>
@@ -42,7 +42,7 @@ export function Footer() {
               <p className="pt-3 text-center md:text-left">
                 {' '}
                 <span className="font-bold">Whatsapp Number: </span>
-                <span className='text-green-600'>+2348138462394</span>
+                <span className="text-green-600">+2348138462394</span>
               </p>
               <p className="text-center text-sm md:text-left">
                 Mon to Fri - 9am to 5pm WAT
@@ -72,12 +72,12 @@ export function Footer() {
             </div>
           </div>
           <div className="flex flex-col">
-            <h1 className="mb-8 font-bold text-center text-2xl md:text-left">
+            <h1 className="mb-8 text-center text-2xl font-bold md:text-left">
               Apply Online
             </h1>
             <div className="text-center md:text-left">
               <Link href="https://temp-app-pockettailwind.herokuapp.com/#pricing">
-                <a className="rounded-xl border-[1px] border-black bg-black py-4 px-8 text-base text-white duration-300 hover:border-[1px] hover:bg-white hover:text-black">
+                <a className="rounded-xl border-[1px] border-black bg-black py-3 px-8 text-base text-white duration-300 hover:border-[1px] hover:bg-white hover:text-black">
                   Start Trading
                 </a>
               </Link>
@@ -85,28 +85,28 @@ export function Footer() {
           </div>
         </div>
         <div className="flex flex-col items-center border-t border-gray-200 px-5 pb-8 md:px-10 md:pt-6">
-          <div className="flex py-3 md:py-5">
+          <div className="flex pt-5 md:py-5">
             <a
               href="https://facebook.com/FT9ja-101059375510372/"
-              className="rounded-full mx-2 border-[1px] border-black bg-black p-2 text-white duration-300 hover:bg-white hover:text-black"
+              className="mx-2 rounded-full border-[1px] border-black bg-black p-2 text-white duration-300 hover:bg-white hover:text-black"
             >
               <ImFacebook className="text-2xl" />
             </a>
             <a
               href="https://www.instagram.com/ft9ja.official/"
-              className="rounded-full mx-2 border-[1px] border-black bg-black p-2 text-white duration-300 hover:bg-white hover:text-black"
+              className="mx-2 rounded-full border-[1px] border-black bg-black p-2 text-white duration-300 hover:bg-white hover:text-black"
             >
               <GrInstagram className="text-2xl" />
             </a>
             <a
               href="https://twitter.com/ft9ja_official"
-              className="rounded-full mx-2 border-[1px] border-black bg-black p-2 text-white duration-300 hover:bg-white hover:text-black"
+              className="mx-2 rounded-full border-[1px] border-black bg-black p-2 text-white duration-300 hover:bg-white hover:text-black"
             >
               <ImTwitter className="text-2xl" />
             </a>
             <a
               href="https://www.youtube.com/channel/UCM3RtiMpxAQ3pNUnvUP9xcw"
-              className="rounded-full mx-2 border-[1px] border-black bg-black p-2 text-white duration-300 hover:bg-white hover:text-black"
+              className="mx-2 rounded-full border-[1px] border-black bg-black p-2 text-white duration-300 hover:bg-white hover:text-black"
             >
               <ImYoutube className="text-2xl" />
             </a>

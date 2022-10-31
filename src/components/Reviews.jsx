@@ -13,87 +13,89 @@ import { Container } from '@/components/Container'
 
 const reviews = [
   {
-    title: 'It really works.',
-    body: 'I downloaded Pocket today and turned $5000 into $25,000 in half an hour.',
-    author: 'CrazyInvestor',
+    title: 'The best prop so far, FT9JA',
+    body: `Ft9ja our home based Prop is really a dream come true. The amazing offers they provide for Nigerian
+    traders especially synthetic indices traders is amazingly wow. Affordable purchase fees, refund
+    available, 2nd chance account should in case you lose your first account. Getting paid for passing
+    the evaluation which is only just one phase. I mean Ft9ja is really great and I know they would attain
+    more heights in the coming years. Cheers to ft9ja and Nigerian traders. This is a big blessing to us
+    here. Ft9ja all the way`,
+    author: 'Lawrence',
     rating: 5,
   },
   {
-    title: 'You need this app.',
-    body: 'I didn’t understand the stock market at all before Pocket. I still don’t, but at least I’m rich now.',
-    author: 'CluelessButRich',
+    title: 'Got introduced to Mr Bassey as my',
+    body: `Got introduced to Mr Bassey as my account manager. I must say he works really hard, a manager who took time out to send voicenotes just to make sure I understood the rules in details. My advice to traders read the rules if you do not understand ask Mr bassey, trust me he will put you through.`,
+    author: 'Emma',
     rating: 5,
   },
   {
-    title: 'This shouldn’t be legal.',
+    title: 'FT9ja has exceeded my expectations',
     body: 'Pocket makes it so easy to win big in the stock market that I can’t believe it’s actually legal.',
     author: 'LivingDaDream',
     rating: 5,
   },
   {
     title: 'Screw financial advisors.',
-    body: 'I barely made any money investing in mutual funds. With Pocket, I’m doubling my net-worth every single month.',
-    author: 'JordanBelfort1962',
+    body: `I have been trading with FT9ja for about 3 months now and So far the whole experience has been very positive and FT9ja has exceeded my expectations. I love their mode of operation because they provide a conducive environment for us their traders via an efficient support system.
+
+    Their talent bonus and Profit split withdrawals are well processed and very promptly.
+
+    Yes! I’ll highly recommend FT9ja to all traders who are serious about their trading but need a funded account.`,
+    author: 'Okocha',
     rating: 5,
   },
   {
-    title: 'I love it!',
-    body: 'I started providing insider information myself and now I get new insider tips every 5 minutes. I don’t even have time to act on all of them. New Lamborghini is being delivered next week!',
-    author: 'MrBurns',
+    title: 'FT9ja is the best prop firm I have ever used',
+    body: `FT9ja is by far the best prop firm I have ever used. Their rules are so clear and easy. I would
+    recommend FT9ja to as many Traders as I can any day any time! Honestly, the only time anyone
+    would have issues with FT9ja is if you don’t read the rules.
+    More Traders really need to know about FT9ja. I mean, which other prop firm gives you a second
+    chance account when you violate a rule? no time limit to pass the evaluation? or even the ability to
+    trade volatility indices? None! If you are an excellent Trader, trading with Ft9ja should be a walk in
+    the park`,
+    author: 'Shalom Hassan',
     rating: 5,
   },
   {
-    title: 'Too good to be true.',
-    body: 'I was making money so fast with Pocket that it felt like a scam. But I sold my shares and withdrew the money and it’s really there, right in my bank account. This app is crazy!',
-    author: 'LazyRich99',
+    title: `It’s a 5 star for me because they pay`,
+    body: `It’s a 5 star for me because they pay you up to 80% weekly!!!`,
+    author: 'Samuel Edu',
     rating: 5,
   },
   {
-    title: 'Wish I could give 6 stars',
-    body: 'This is literally the most important app you will ever download in your life. Get on this before it’s so popular that everyone else is getting these tips too.',
-    author: 'SarahLuvzCash',
+    title: 'Honest and Dedicated Account Manager',
+    body: `I trade with ft9ja. Today I needed help from Bassey, my Account Manager, becos I had a few
+    questions any my trading performance. Bassey answered my chat request. his responses were quick
+    and clear and he took his time. I can tell he is a really hard worker guy and I wish every other prop
+    firm have a dedicated Account Manager like FT9ja!`,
+    author: 'Shade',
     rating: 5,
   },
   {
-    title: 'Bought an island.',
-    body: 'Yeah, you read that right. Want your own island too? Get Pocket.',
-    author: 'ScroogeMcduck',
+    title: 'FTMO alternative for Nigerian online Traders.',
+    body: `There isn’t a brand like this in Nigeria presently that I know of. I know a couple of European prop firm
+    but Ft9ja’s service is innovative, flexible, and more suitable for Naija Traders. Trust me, they are
+    going blow soon. The only issue is their customer service; they don’t respond on time on weekends.
+    Enjoying trading for them currently, prompt payments…would recommend them anytime and any
+    day`,
+    author: 'Promise',
     rating: 5,
   },
   {
-    title: 'No more debt!',
-    body: 'After 2 weeks of trading on Pocket I was debt-free. Why did I even go to school at all when Pocket exists?',
-    author: 'BruceWayne',
+    title: 'Consistent Guys',
+    body: `Me and my guys thought the prop firm model can’t work in Nigeria. But FT9ja has proved us wrong
+    by being consistent and transparent. A team of bold and hardworking guys.Trading naija will never
+    be the same again!`,
+    author: 'Nduka',
     rating: 5,
   },
   {
-    title: 'I’m 13 and I’m rich.',
-    body: 'I love that with Pocket’s transaction anonymization I could sign up and start trading when I was 12 years old. I had a million dollars before I had armpit hair!',
-    author: 'RichieRich',
-    rating: 5,
-  },
-  {
-    title: 'Started an investment firm.',
-    body: 'I charge clients a 3% management fee and just throw all their investments into Pocket. Easy money!',
-    author: 'TheCountOfMonteChristo',
-    rating: 5,
-  },
-  {
-    title: 'It’s like a superpower.',
-    body: 'Every tip Pocket has sent me has paid off. It’s like playing Blackjack but knowing exactly what card is coming next!',
-    author: 'ClarkKent',
-    rating: 5,
-  },
-  {
-    title: 'Quit my job.',
-    body: 'I downloaded Pocket three days ago and quit my job today. I can’t believe no one else thought to build a stock trading app that works this way!',
-    author: 'GeorgeCostanza',
-    rating: 5,
-  },
-  {
-    title: 'Don’t download this app',
-    body: 'Unless you want to have the best life ever! I am literally writing this from a yacht.',
-    author: 'JeffBezos',
+    title:
+      'Trading with discipline. I believe trading with FT9ja has made me...',
+    body: `I believe that trading with FT9ja has helped me to become more disciplined and confident in my
+    trading. Because trading necessitates coaching and support, I respect the advice given at each stage.`,
+    author: 'Adumu Usman',
     rating: 5,
   },
 ]
@@ -262,10 +264,11 @@ export function Reviews() {
           id="reviews-title"
           className="text-3xl font-medium tracking-tight text-gray-900 sm:text-center"
         >
-          Everyone is changing their life with Pocket.
+          Feedback from our traders
         </h2>
         <p className="mt-2 text-lg text-gray-600 sm:text-center">
-          Thousands of people have doubled their net-worth in the last 30 days.
+          Thousands of Traders love trading with FT9ja Prop Firm. Here's what
+          some of them say.
         </p>
         <ReviewGrid />
       </Container>

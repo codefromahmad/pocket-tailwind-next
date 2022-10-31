@@ -17,7 +17,7 @@ export default function Register() {
           <>
             Already registered?{' '}
             <Link href="/login" className="text-cyan-600">
-              Sign in
+              <span className="cursor-pointer text-green-600">Sign in</span>
             </Link>{' '}
             to your account.
           </>

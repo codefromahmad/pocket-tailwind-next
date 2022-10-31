@@ -4,23 +4,40 @@ import { Container } from '@/components/Container'
 
 const features = [
   {
-    name: 'Sign up',
+    name: 'Talent Bonus',
     description:
-      'We provide three account sizes for Traders to start with: $3,000, $5,000 and $25,000. Choose your account size, select a broker, and you’ll receive login details to a ZumaRock AccountTM within 24 hours of purchase! This is the account you’ll begin trading. ',
-    link: 'https://docs.google.com/presentation/d/10Jc1VAjgV9nLSjCVYcQXe11DBks1GvMoc5Fqzaivyu0/edit?usp=sharing',
+      'Get paid during evaluation',
     icon: DeviceArrowIcon,
   },
   {
-    name: 'Start Trading',
+    name: 'Fast Payout',
     description:
-      'Trade the Zuma Account and receive payouts as soon as 10 days. Choose between 5% weekly or 10% monthly Talent Bonus. When you grow your Zuma Account to 25% (no time limit), you move to the Aso Account and you start earning up to 80% Profit Split. Just abide by the rules. See our rules here.',
+      'Weekly or monthly payout (after the first 10 days)',
     icon: DeviceCardsIcon,
   },
   {
-    name: 'Get Paid',
+    name: 'Flexible',
     description:
-      'You choose your medium of getting paid: bank account or Paypal. You choose between weekly or monthly payouts. It is as simple as this getting paid with FT9ja!',
+      'No time limit to achieve 25% profit target.',
     icon: DeviceClockIcon,
+  },
+  {
+    name: 'One-time Payment',
+    description:
+      'No hidden fee or monthly payment',
+    icon: DeviceListIcon,
+  },
+  {
+    name: 'Wide Range of Instruments',
+    description:
+      'Trade financial or synthetic indices (VIX) On Deriv!',
+    icon: DeviceLockIcon,
+  },
+  {
+    name: '2nd Chance Account',
+    description:
+      'Naija happens - get a 2nd account free of charge',
+    icon: DeviceChartIcon,
   },
 ]
 
@@ -179,8 +196,12 @@ export function SecondaryFeatures() {
       <Container>
         <div className="mx-auto max-w-2xl sm:text-center">
           <h2 className="text-3xl font-medium tracking-tight text-gray-900">
-            How It Works?
+            FT9ja is the best. And here's why
           </h2>
+          <p className="mt-2 text-lg text-gray-600">
+            We want you to win, so we created the best nextgeneration prop firm
+            in the world.
+          </p>
         </div>
         <ul
           role="list"
@@ -195,14 +216,7 @@ export function SecondaryFeatures() {
               <h3 className="mt-6 font-semibold text-gray-900">
                 {feature.name}
               </h3>
-              <p className="mt-2 text-gray-700">
-                {feature.description}
-                {feature.link && (
-                  <a className="text-green-600" href={feature.link}>
-                    Learn more
-                  </a>
-                )}
-              </p>
+              <p className="mt-2 text-gray-700">{feature.description}</p>
             </li>
           ))}
         </ul>

@@ -345,19 +345,26 @@ export function Hero() {
               Every Trader deserves a chance to be successful
             </h1>
             <p className="mt-6 text-lg text-gray-600">
-              Trade up to $50,000 of our company&apos;s capital and get paid
-              up to 80% of the profit weekly or monthly. No challenges. No risk
-              for you, we take the losses. Join the team of our successful
-              Traders now.
+              Trade up to $50,000 of our company&apos;s capital and get paid up
+              to 80% of the profit weekly or monthly. No challenges. No risk for
+              you, we take the losses. Join the team of our successful Traders
+              now.
             </p>
-            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
-              <div className="text-center md:text-left">
-                <Link href="https://temp-app-pockettailwind.herokuapp.com/#pricing">
-                  <a className="rounded-lg bg-black py-4 px-8 text-lg text-white duration-300 hover:bg-gray-800">
-                    Start Trading
-                  </a>
-                </Link>
-              </div>
+            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
+              <Link href="https://temp-app-pockettailwind.herokuapp.com/#pricing">
+                <a className="rounded-md bg-black py-2 px-5 text-white duration-300 hover:bg-gray-800">
+                  Start Trading
+                </a>
+              </Link>
+              <Button
+                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                variant="outline"
+              >
+                <a target='_blank' className='px-2 rounded-md border-[1px] border-slate-200 cursor-pointer flex items-center'>
+                  <PlayIcon className="h-6 w-6 flex-none" />
+                  <span className='ml-2'>Watch the video</span>
+                </a>
+              </Button>
             </div>
           </div>
           <div className="relative mt-10 sm:mt-20 lg:col-span-5 lg:row-span-2 lg:mt-0 xl:col-span-6">

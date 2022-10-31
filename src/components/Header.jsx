@@ -1,10 +1,7 @@
 import Link from 'next/link'
 import { Popover } from '@headlessui/react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import { Logo } from '@/components/Logo'
-import { NavLinks } from '@/components/NavLinks'
 import { useRouter } from 'next/router'
 import logo from '../images/logo.png'
 import Image from 'next/future/image'
@@ -35,18 +32,6 @@ function ChevronUpIcon(props) {
   )
 }
 
-function MobileNavLink({ children, ...props }) {
-  return (
-    <Popover.Button
-      as={Link}
-      className="block text-base leading-7 tracking-tight text-gray-700 hover:bg-black"
-      {...props}
-    >
-      {children}
-    </Popover.Button>
-  )
-}
-
 export function Header() {
   const router = useRouter()
   return (
@@ -57,11 +42,51 @@ export function Header() {
             <Link href="/" aria-label="Home">
               <Image src={logo} alt="alsdkjf" />
             </Link>
-            {/* {router.pathname === '/' && (
-              <div className="hidden lg:flex lg:gap-10">
-                <NavLinks />
-              </div>
-            )} */}
+            <div className="hidden justify-between lg:flex">
+              <Link href="/how-it-works">
+                <a
+                  className={`mx-1 rounded-lg p-3 ${
+                    router.pathname === '/how-it-works' ? 'bg-slate-200' : ''
+                  } duration-300 hover:bg-slate-200`}
+                >
+                  How it works
+                </a>
+              </Link>
+              <Link href="https://temp-app-pockettailwind.herokuapp.com/#pricing">
+                <a
+                  className={`mx-1 rounded-lg p-3 duration-300 hover:bg-slate-200`}
+                >
+                  Pricing
+                </a>
+              </Link>
+              <Link href="/support">
+                <a
+                  className={`mx-1 rounded-lg p-3 ${
+                    router.pathname === '/support' ? 'bg-slate-200' : ''
+                  } duration-300 hover:bg-slate-200`}
+                >
+                  Support/FAQs
+                </a>
+              </Link>
+              <Link href="#">
+                <a
+                  className={`mx-1 rounded-lg p-3 ${
+                    router.pathname === '#' ? 'bg-slate-200' : ''
+                  } duration-300 hover:bg-slate-200`}
+                >
+                  Community
+                </a>
+              </Link>
+              <Link href="/contact">
+                <a
+                  className={`mx-1 rounded-lg p-3 ${
+                    router.pathname === '/contact' ? 'bg-slate-200' : ''
+                  } duration-300 hover:bg-slate-200`}
+                >
+                  Contact
+                </a>
+              </Link>
+            </div>
           </div>
           <div className="flex items-center gap-6">
             <Popover className="lg:hidden">
@@ -102,33 +127,7 @@ export function Header() {
                           }}
                           className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-white px-6 pb-6 pt-16 shadow-2xl shadow-gray-900/20"
                         >
-                          {/* {router.pathname === '/' && (
-                            <div className="flex flex-col space-y-4">
-                              <MobileNavLink
-                                href="#features"
-                                className="hover:bg-black"
-                              >
-                                Features
-                              </MobileNavLink>
-                              <MobileNavLink href="#reviews">
-                                Reviews
-                              </MobileNavLink>
-                              <MobileNavLink href="#pricing">
-                                Pricing
-                              </MobileNavLink>
-                              <MobileNavLink href="#faqs">FAQs</MobileNavLink>
-                            </div>
-                          )} */}
                           <div className="mt-8 flex flex-col gap-4">
-                            <Link href="/">
-                              <a
-                                className={`rounded-lg p-3 ${
-                                  router.pathname === '/' ? 'bg-slate-200' : ''
-                                } duration-300 hover:bg-slate-200`}
-                              >
-                                Home
-                              </a>
-                            </Link>
                             <Link href="/how-it-works">
                               <a
                                 className={`rounded-lg p-3 ${
@@ -138,6 +137,35 @@ export function Header() {
                                 } duration-300 hover:bg-slate-200`}
                               >
                                 How it works
+                              </a>
+                            </Link>
+                            <Link href="https://temp-app-pockettailwind.herokuapp.com/#pricing">
+                              <a
+                                className={`rounded-lg p-3 duration-300 hover:bg-slate-200`}
+                              >
+                                Pricing
+                              </a>
+                            </Link>
+                            <Link href="/support">
+                              <a
+                                className={`rounded-lg p-3 ${
+                                  router.pathname === '/support'
+                                    ? 'bg-slate-200'
+                                    : ''
+                                } duration-300 hover:bg-slate-200`}
+                              >
+                                Support/FAQs
+                              </a>
+                            </Link>
+                            <Link href="#">
+                              <a
+                                className={`rounded-lg p-3 ${
+                                  router.pathname === '/contact'
+                                    ? 'bg-slate-200'
+                                    : ''
+                                } duration-300 hover:bg-slate-200`}
+                              >
+                                Community
                               </a>
                             </Link>
                             <Link href="/contact">
@@ -151,15 +179,26 @@ export function Header() {
                                 Contact
                               </a>
                             </Link>
-                            <Link href="/support">
+                            <Link href="/login">
                               <a
-                                className={`rounded-lg p-3 ${
-                                  router.pathname === '/support'
+                                className={`mx-1 rounded-lg p-3 ${
+                                  router.pathname === '/login'
                                     ? 'bg-slate-200'
                                     : ''
                                 } duration-300 hover:bg-slate-200`}
                               >
-                                Support
+                                Login
+                              </a>
+                            </Link>
+                            <Link href="/register">
+                              <a
+                                className={`rounded-lg p-3 ${
+                                  router.pathname === '/register'
+                                    ? 'bg-slate-200'
+                                    : ''
+                                } border-[1px] border-black bg-black text-white duration-300 hover:bg-white hover:text-black`}
+                              >
+                                Register
                               </a>
                             </Link>
                           </div>
@@ -170,47 +209,24 @@ export function Header() {
                 </>
               )}
             </Popover>
-            <div className="hidden justify-between lg:flex">
-              <Link href="/">
-                <a
-                  className={`mx-1 rounded-lg p-3 ${
-                    router.pathname === '/' ? 'bg-slate-200' : ''
-                  } duration-300 hover:bg-slate-200`}
-                >
-                  Home
-                </a>
-              </Link>
-
-              <Link href="/how-it-works">
-                <a
-                  className={`mx-1 rounded-lg p-3 ${
-                    router.pathname === '/how-it-works' ? 'bg-slate-200' : ''
-                  } duration-300 hover:bg-slate-200`}
-                >
-                  How it works
-                </a>
-              </Link>
-
-              <Link href="/contact">
-                <a
-                  className={`mx-1 rounded-lg p-3 ${
-                    router.pathname === '/contact' ? 'bg-slate-200' : ''
-                  } duration-300 hover:bg-slate-200`}
-                >
-                  Contact
-                </a>
-              </Link>
-
-              <Link href="/support">
-                <a
-                  className={`mx-1 rounded-lg p-3 ${
-                    router.pathname === '/support' ? 'bg-slate-200' : ''
-                  } duration-300 hover:bg-slate-200`}
-                >
-                  Support
-                </a>
-              </Link>
-            </div>
+            <Link href="/login">
+              <a
+                className={`mx-1 rounded-lg p-3 ${
+                  router.pathname === '/login' ? 'bg-slate-200' : ''
+                } duration-300 hover:bg-slate-200`}
+              >
+                Login
+              </a>
+            </Link>
+            <Link href="/register">
+              <a
+                className={`rounded-lg p-3 ${
+                  router.pathname === '/register' ? 'bg-slate-200' : ''
+                } border-[1px] border-black bg-black text-white duration-300 hover:bg-white hover:text-black`}
+              >
+                Register
+              </a>
+            </Link>
           </div>
         </Container>
       </nav>
