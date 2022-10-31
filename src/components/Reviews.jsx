@@ -267,7 +267,7 @@ export function Reviews() {
           Feedback from our traders
         </h2>
         <p className="mt-2 text-lg text-gray-600 sm:text-center">
-          Thousands of Traders love trading with FT9ja Prop Firm. Here's what
+          Thousands of Traders love trading with FT9ja Prop Firm. Here&apos;s what
           some of them say.
         </p>
         <ReviewGrid />
