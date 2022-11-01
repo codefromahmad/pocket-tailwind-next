@@ -431,7 +431,7 @@ function Plan({ plan }) {
                   </td>
                   {typeof text !== 'object' ? (
                     <td
-                      colspan="3"
+                      colSpan="3"
                       className="whitespace-nowrap px-6 py-4 text-center text-sm text-gray-800"
                     >
                       {text}
@@ -448,7 +448,7 @@ function Plan({ plan }) {
                   ) : (
                     <td
                       key={id}
-                      colspan="3"
+                      colSpan="3"
                       className="whitespace-nowrap border-r-[1px] border-gray-200 px-6 py-4 text-center text-sm text-gray-800"
                     >
                       <p className="font-bold">{step}</p>
@@ -508,9 +508,8 @@ function Compare() {
             </thead>
             <tbody className="divide-y divide-gray-200">
               {features.map(({ id, title, point1, point2 }) => (
-                <tr>
+                <tr key={id}>
                   <td
-                    key={id}
                     className="border-r-[1px] border-gray-200 px-8 py-4 text-sm font-bold font-medium text-gray-800"
                   >
                     {title}
@@ -532,9 +531,8 @@ function Compare() {
                 </tr>
               ))}
               {buttons.map(({ id, title, button1, button2 }) => (
-                <tr>
+                <tr key={id}>
                   <td
-                    key={id}
                     className="border-r-[1px] border-gray-200 px-8 py-4 text-sm font-bold font-medium text-gray-800"
                   >
                     {title}
