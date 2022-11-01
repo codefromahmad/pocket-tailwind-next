@@ -26,7 +26,7 @@ export function Footer() {
   return (
     <footer className="bg-white">
       <Container>
-        <div className="mx-auto grid max-w-[425px] grid-cols-1 pt-14 pb-8 md:max-w-screen-2xl md:grid-cols-3 md:gap-10 lg:gap-20 lg:py-10">
+        <div className="mx-auto grid max-w-[425px] grid-cols-1 pt-14 pb-8 md:max-w-screen-2xl md:grid-cols-3 md:gap-10 lg:gap-20 lg:py-15">
           <div className="flex   flex-col text-gray-900">
             <Image src={logo} alt="FT9ja Logo" className="cursor-pointer" />
             <div className="ml-2">
@@ -86,13 +86,22 @@ export function Footer() {
             </div>
           </div>
           <div className="flex flex-col">
-            <h1 className="mb-8 text-center text-2xl font-bold">
+            <h1 className="mb-8 text-center text-2xl font-bold md:text-left">
               Apply Online
             </h1>
             <div className="flex text-center  md:text-right">
               <Link href="https://temp-app-pockettailwind.herokuapp.com/#pricing">
-                <a className="rounded-xl border-[1px] border-black bg-black w-full text-center py-3 px-8 text-base text-white duration-300 hover:border-[1px] hover:bg-white hover:text-black">
+                <a className="rounded-xl mr-2 border-[1px] border-black bg-black py-3 px-8 text-center text-base text-white duration-300 hover:border-[1px] hover:bg-white hover:text-black">
                   Start Trading
+                </a>
+              </Link>
+              <Link href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                <a
+                  target="_blank"
+                  className="flex cursor-pointer items-center rounded-md border-[1px] border-slate-300 px-2"
+                >
+                  <PlayIcon className="h-6 w-6 flex-none" />
+                  <span className="ml-2">Watch the video</span>
                 </a>
               </Link>
             </div>

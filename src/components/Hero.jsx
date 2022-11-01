@@ -362,7 +362,7 @@ export function Hero() {
               >
                 <a
                   target="_blank"
-                  className="flex cursor-pointer hover:border-black hover:bg-black hover:text-white duration-300 items-center rounded-md border-[1px] border-slate-200 px-2"
+                  className="flex cursor-pointer items-center rounded-md border-[1px] border-slate-200 px-2"
                 >
                   <PlayIcon className="h-6 w-6 flex-none" />
                   <span className="ml-2">Watch the video</span>
