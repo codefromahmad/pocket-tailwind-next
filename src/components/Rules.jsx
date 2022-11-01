@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import clsx from 'clsx'
 import RulesBlock from './RulesBlock'
 import SecondRulesBlock from './SecondRulesBlock'
-import Swipper from './Swipper'
 
 const Rules = () => {
   let [activePeriod, setActivePeriod] = useState('Dailt Drawdown')
@@ -68,36 +67,6 @@ const Rules = () => {
               </RadioGroup.Option>
             </RadioGroup>
             <div></div>
-            {/* <div
-              aria-hidden="true"
-              className={clsx(
-                'pointer-events-none absolute inset-0 z-10 grid grid-cols-4 overflow-hidden rounded-lg bg-cyan-500 transition-all duration-300',
-                activePeriod === 'Dailt Drawdown'
-                  ? '[clip-path:inset(0_75%_0_0)]'
-                  : activePeriod === 'Account Drawdown'
-                  ? '[clip-path:inset(0_50%_0_25%)]'
-                  : activePeriod === 'Minimum Trading Days'
-                  ? '[clip-path:inset(0_25%_0_50%)]'
-                  : '[clip-path:inset(0_0_0_calc(75%-1px))]'
-              )}
-            >
-              {[
-                'Dailt Drawdown',
-                'Account Drawdown',
-                'Minimum Trading Days',
-                'Other things to note',
-              ].map((period) => (
-                <div
-                  key={period}
-                  className={clsx(
-                    'py-4 text-center text-sm text-white [&:not(:focus-visible)]:focus:outline-none',
-                    period === 'FT9ja Classic' && '-ml-px'
-                  )}
-                >
-                  {period}
-                </div>
-              ))}
-            </div> */}
           </div>
         </div>
         <div className="py-5 md:py-14">

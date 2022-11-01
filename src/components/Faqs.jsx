@@ -150,7 +150,7 @@ export function Faqs() {
                       className="text-md mb-3 w-full cursor-pointer rounded-lg text-left font-bold"
                     >
                       <button
-                      className='flex justify-between w-full'
+                        className="flex w-full justify-between"
                         data-value={open}
                         ref={(ref) => {
                           buttonRefs.current[idx] = ref
@@ -185,9 +185,11 @@ export function Faqs() {
                         >
                           {answer && answer}
                           {list && (
-                            <ul>
+                            <ul className="list-item ml-3">
                               {list.map(({ id, title }) => (
-                                <li key={id}>{title}</li>
+                                <li className="list-disc ml-2 py-1" key={id}>
+                                  {title}
+                                </li>
                               ))}
                             </ul>
                           )}

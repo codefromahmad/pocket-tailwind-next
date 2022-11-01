@@ -6,13 +6,27 @@ import { useRouter } from 'next/router'
 import logo from '../images/logo.png'
 import { ImFacebook, ImTwitter, ImYoutube } from 'react-icons/im'
 import { GrInstagram } from 'react-icons/gr'
+import { Button } from './Button'
+
+function PlayIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
+      <circle cx="12" cy="12" r="11.5" stroke="#D4D4D4" />
+      <path
+        d="M9.5 14.382V9.618a.5.5 0 0 1 .724-.447l4.764 2.382a.5.5 0 0 1 0 .894l-4.764 2.382a.5.5 0 0 1-.724-.447Z"
+        fill="#A3A3A3"
+        stroke="#A3A3A3"
+      />
+    </svg>
+  )
+}
 
 export function Footer() {
   const router = useRouter()
   return (
     <footer className="bg-white">
       <Container>
-        <div className="mx-auto grid max-w-[425px] grid-cols-1 md:gap-10 pt-14 pb-8 md:max-w-screen-2xl md:grid-cols-3 lg:gap-20 lg:py-10">
+        <div className="mx-auto grid max-w-[425px] grid-cols-1 pt-14 pb-8 md:max-w-screen-2xl md:grid-cols-3 md:gap-10 lg:gap-20 lg:py-10">
           <div className="flex   flex-col text-gray-900">
             <Image src={logo} alt="alsdkjf" />
             <div className="ml-2">
@@ -28,7 +42,7 @@ export function Footer() {
               </p>
             </div>
           </div>
-          <div className="flex py-10 md:py-0 flex-col">
+          <div className="flex flex-col py-10 md:py-0">
             <h1 className="mb-4 text-center text-2xl font-bold md:text-left">
               Contact Us
             </h1>
@@ -75,12 +89,24 @@ export function Footer() {
             <h1 className="mb-8 text-center text-2xl font-bold md:text-left">
               Apply Online
             </h1>
-            <div className="text-center md:text-left">
+            <div className="text-center flex  md:text-right">
               <Link href="https://temp-app-pockettailwind.herokuapp.com/#pricing">
                 <a className="rounded-xl border-[1px] border-black bg-black py-3 px-8 text-base text-white duration-300 hover:border-[1px] hover:bg-white hover:text-black">
                   Start Trading
                 </a>
               </Link>
+              <Button
+                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                variant="outline"
+              >
+                <a
+                  target="_blank"
+                  className="flex ml-2 cursor-pointer items-center rounded-md border-[1px] border-slate-400 px-2"
+                >
+                  <PlayIcon className="h-6 w-6 flex-none" />
+                  <span className="ml-2">Watch the video</span>
+                </a>
+              </Button>
             </div>
           </div>
         </div>

@@ -30,13 +30,7 @@ const reviews = [
     rating: 5,
   },
   {
-    title: 'FT9ja has exceeded my expectations',
-    body: 'Pocket makes it so easy to win big in the stock market that I can’t believe it’s actually legal.',
-    author: 'LivingDaDream',
-    rating: 5,
-  },
-  {
-    title: 'Screw financial advisors.',
+    title: 'FT9ja has exceeded my expectations.',
     body: `I have been trading with FT9ja for about 3 months now and So far the whole experience has been very positive and FT9ja has exceeded my expectations. I love their mode of operation because they provide a conducive environment for us their traders via an efficient support system.
 
     Their talent bonus and Profit split withdrawals are well processed and very promptly.

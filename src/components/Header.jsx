@@ -211,7 +211,7 @@ export function Header() {
             </Popover>
             <Link href="/login">
               <a
-                className={`mx-1 rounded-lg p-3 ${
+                className={`mx-1 hidden rounded-lg p-3 lg:block ${
                   router.pathname === '/login' ? 'bg-slate-200' : ''
                 } duration-300 hover:bg-slate-200`}
               >
@@ -220,7 +220,7 @@ export function Header() {
             </Link>
             <Link href="/register">
               <a
-                className={`rounded-lg p-3 ${
+                className={`hidden rounded-lg p-3 lg:block ${
                   router.pathname === '/register' ? 'bg-slate-200' : ''
                 } border-[1px] border-black bg-black text-white duration-300 hover:bg-white hover:text-black`}
               >
