@@ -91,28 +91,28 @@ export default function App() {
               navigation={{ prevEl, nextEl }}
               // navigation={true}
             >
-              <SwiperSlide className="text-white text-justify">
+              <SwiperSlide className="text-justify text-white">
                 Slide 1 Lorem Ipsum is simply dummy text of the printing and
                 typesetting industry. Lorem Ipsum has been the industrys
                 standard dummy text ever since the 1500s, when an unknown
                 printer took a galley of type and scrambled it to make a type
                 specimen book. It has survived not only five centuries.
               </SwiperSlide>
-              <SwiperSlide className="text-white text-justify">
+              <SwiperSlide className="text-justify text-white">
                 Slide 1 Lorem Ipsum is simply dummy text of the printing and
                 typesetting industry. Lorem Ipsum has been the industrys
                 standard dummy text ever since the 1500s, when an unknown
                 printer took a galley of type and scrambled it to make a type
                 specimen book. It has survived not only five centuries.
               </SwiperSlide>
-              <SwiperSlide className="text-white text-justify">
+              <SwiperSlide className="text-justify text-white">
                 Slide 1 Lorem Ipsum is simply dummy text of the printing and
                 typesetting industry. Lorem Ipsum has been the industrys
                 standard dummy text ever since the 1500s, when an unknown
                 printer took a galley of type and scrambled it to make a type
                 specimen book. It has survived not only five centuries.
               </SwiperSlide>
-              <SwiperSlide className="text-white text-justify">
+              <SwiperSlide className="text-justify text-white">
                 Slide 1 Lorem Ipsum is simply dummy text of the printing and
                 typesetting industry. Lorem Ipsum has been the industrys
                 standard dummy text ever since the 1500s, when an unknown
@@ -122,7 +122,7 @@ export default function App() {
             </Swiper>
             <div
               ref={(node) => setPrevEl(node)}
-              className="absolute shadow-gray-500 shadow-md bottom-[40%] md:-ml-6 -ml-1.5 left-0 h-10 w-10 cursor-pointer rounded-full bg-white"
+              className="absolute bottom-[40%] left-0 -ml-1.5 h-10 w-10 cursor-pointer rounded-full bg-white duration-300 hover:opacity-80 md:-ml-6"
             >
               <span className="flex justify-center pt-[7px]">
                 <GrFormPreviousLink size="1.5rem" />
@@ -130,7 +130,7 @@ export default function App() {
             </div>
             <div
               ref={(node) => setNextEl(node)}
-              className="absolute bottom-[40%] shadow-gray-500 shadow-md md:-mr-6 -mr-1.5 right-0 h-10 w-10 cursor-pointer rounded-full bg-white"
+              className="absolute bottom-[40%] right-0 -mr-1.5 h-10 w-10 cursor-pointer rounded-full bg-white duration-300 hover:opacity-80 md:-mr-6"
             >
               <span className="flex justify-center pt-[7px]">
                 <GrFormNextLink size="1.5rem" />
