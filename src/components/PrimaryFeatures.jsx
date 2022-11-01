@@ -194,7 +194,7 @@ function InviteScreen({ custom, animated = false }) {
               </div>
             ))}
           </div>
-          <div className="mt-6 rounded-lg bg-cyan-500 py-2 px-3 text-center text-sm font-semibold text-white">
+          <div className="mt-6 rounded-lg bg-[#28a745] py-2 px-3 text-center text-sm font-semibold text-white">
             Invite person
           </div>
         </div>
@@ -252,7 +252,7 @@ function StocksScreen({ custom, animated = false }) {
               name: 'Statamic',
               price: '5,040.85',
               change: '-3.11%',
-              color: '#0EA5E9',
+              color: '#28a745',
               logo: StatamicLogo,
             },
             {
@@ -325,7 +325,7 @@ function InvestScreen({ custom, animated = false }) {
                     <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6">
                       <path
                         d="M17 15V7H9M17 7 7 17"
-                        stroke="#06B6D4"
+                        stroke="#28a745"
                         strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -346,7 +346,7 @@ function InvestScreen({ custom, animated = false }) {
                 </div>
               </div>
             ))}
-            <div className="rounded-lg bg-cyan-500 py-2 px-3 text-center text-sm font-semibold text-white">
+            <div className="rounded-lg bg-[#28a745] py-2 px-3 text-center text-sm font-semibold text-white">
               Buy shares
             </div>
           </div>
@@ -419,7 +419,7 @@ function FeaturesDesktop() {
       </Tab.List>
       <div className="relative col-span-6">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          <CircleBackground color="#13B5C8" className="animate-spin-slower" />
+          <CircleBackground color="#28a745" className="animate-spin-slower" />
         </div>
         <PhoneFrame className="z-10 mx-auto w-full max-w-[366px]">
           <Tab.Panels as={Fragment}>

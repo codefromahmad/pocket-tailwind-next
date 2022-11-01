@@ -192,7 +192,7 @@ function InviteScreen({ custom, animated = false }) {
               </div>
             ))}
           </div>
-          <div className="mt-6 rounded-lg bg-cyan-500 py-2 px-3 text-center text-sm font-semibold text-white">
+          <div className="mt-6 rounded-lg bg-[#28a745] py-2 px-3 text-center text-sm font-semibold text-white">
             Invite person
           </div>
         </div>
@@ -344,7 +344,7 @@ function InvestScreen({ custom, animated = false }) {
                 </div>
               </div>
             ))}
-            <div className="rounded-lg bg-cyan-500 py-2 px-3 text-center text-sm font-semibold text-white">
+            <div className="rounded-lg bg-[#28a745] py-2 px-3 text-center text-sm font-semibold text-white">
               Buy shares
             </div>
           </div>
@@ -563,7 +563,7 @@ export function SecondFeatures() {
           className="sm:py-15 bg-gray-900 py-20"
         >
           <Container>
-            {/* <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-3xl">
+            <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-3xl">
           <h2 className="text-3xl font-medium tracking-tight text-white">
             Every feature you need to win. Try it for yourself.
           </h2>
@@ -573,7 +573,7 @@ export function SecondFeatures() {
             dreams. If other investing tools are afraid to build it, Pocket has
             it.
           </p>
-        </div> */}
+        </div>
           </Container>
           <div className="mt-16 md:hidden">
             <FeaturesMobile />

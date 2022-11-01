@@ -269,7 +269,7 @@ const Faq = () => {
           <div className="flex py-10">
             <div className="hidden w-1/3 px-5 md:block">
               {supportLinks.map(({ id, title, links }) => (
-                <div key={id}>
+                <div key={id} className="py-4">
                   <p className="py-2 font-bold">{title}</p>
                   {links.map(({ id, title, link }) => (
                     <div
@@ -288,7 +288,7 @@ const Faq = () => {
             <div className="w-full px-6 sm:px-10 md:w-2/3">
               {answer && (
                 <div>
-                  <p className="py-3 text-2xl font-bold md:text-4xl">
+                  <p className="pt-3 pb-10 text-2xl font-bold md:text-4xl">
                     {answer.title}
                   </p>
                   <p>{answer.answer}</p>

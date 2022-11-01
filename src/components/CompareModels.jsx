@@ -1,65 +1,143 @@
 import React from 'react'
+import clsx from 'clsx'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 const CompareModels = () => {
-  const models = [
+
+  const compare = [
     {
-      id: 1,
-      title: 'FT9ja Classic',
-      items: [
+      headings: [
         {
           id: 1,
-          text: 'some text',
+          heading: '  ',
         },
         {
           id: 2,
-          text: 'some text',
+          heading: 'FT9ja Classic',
         },
         {
           id: 3,
-          text: 'some text',
-        },
-        {
-          id: 4,
-          text: 'some text',
-        },
-        {
-          id: 5,
-          text: 'some text',
-        },
-        {
-          id: 6,
-          text: 'some text',
+          heading: 'FT9ja Challenge',
         },
       ],
-    },
-    {
-      id: 2,
-      title: 'FT9ja Classic',
-      items: [
+      features: [
         {
           id: 1,
-          text: 'some text',
+          title: 'Evaluation',
+          point1: [
+            {
+              id: 1,
+              text: '1-Step:',
+            },
+            {
+              id: 2,
+              text: '25% profit target',
+            },
+          ],
+          point2: [
+            {
+              id: 1,
+              text: '2-Steps:',
+            },
+            {
+              id: 2,
+              text: 'Challenge: 10% profit target',
+            },
+            {
+              id: 3,
+              text: 'Evaluation: 5% profit target',
+            },
+          ],
         },
         {
           id: 2,
-          text: 'some text',
+          title: 'Profit Split',
+          point1: 'Up to 80%',
+          point2: 'Up to 80%',
         },
         {
           id: 3,
-          text: 'some text',
+          title: 'Talent Bonus',
+          point1: 'Up to 10%',
+          point2: 'No',
         },
         {
           id: 4,
-          text: 'some text',
+          title: 'Time limit',
+          point1: 'No time limit',
+          point2: [
+            {
+              id: 1,
+              text: 'Challenge: 1 month',
+            },
+            {
+              id: 2,
+              text: 'Verification: 2 month',
+            },
+          ],
         },
         {
           id: 5,
-          text: 'some text',
+          title: 'Free 2nd Chance Account',
+          point1: 'Yes',
+          point2: 'No',
         },
         {
           id: 6,
-          text: 'some text',
+          title: 'Brokers',
+          point1: 'ICMarkets, FXTM, Deriv',
+          point2: 'ICMarkets, FXTM',
+        },
+        {
+          id: 7,
+          title: 'Payout Frequency',
+          point1: 'Weekly or Monthly',
+          point2: 'Bi-Weekly or Monthly',
+        },
+        {
+          id: 8,
+          title: 'Daily Drawn',
+          point1: '5%',
+          point2: '5%',
+        },
+        {
+          id: 9,
+          title: 'Account Drawn',
+          point1: '10%',
+          point2: '10%',
+        },
+        {
+          id: 10,
+          title: 'Minimum Trading days',
+          point1: [
+            {
+              id: 1,
+              text: '10 days',
+            },
+            {
+              id: 2,
+              text: '- Minimum of 2 days per week',
+            },
+          ],
+          point2: [
+            {
+              id: 1,
+              text: '6 days in each phase',
+            },
+            {
+              id: 2,
+              text: '- Minimum of 2 days per week',
+            },
+          ],
+        },
+      ],
+      buttons: [
+        {
+          id: 1,
+          title: '',
+          button1: 'Select Classic',
+          button2: 'Select Challenge',
         },
       ],
     },
@@ -80,37 +158,78 @@ const CompareModels = () => {
   }
 
   return (
-    <section
-      id="features"
-      aria-label="Features for investing all your money"
-      className="sm:py-15 w-full bg-gray-900 px-2 py-20 lg:mx-0"
-    >
-      <motion.div {...Animations}>
-        <div className=" py-15 mx-auto max-w-screen-md text-white">
-          <div className="grid grid-cols-1 gap-16 py-10 md:grid-cols-2">
-            {models.map(({ id, title, items }) => (
-              <div
-                className="rounded-lg border-[1px] border-white text-center"
-                key={id}
-              >
-                <h1 className="border-b-[1px] py-4 font-bold">{title}</h1>
-                {items.map(({ id, text }) => (
-                  <p
-                    key={id}
-                    className={`py-4 ${id % 2 === 0 ? 'bg-gray-700' : ''} `}
-                  >
-                    {text}
-                  </p>
+    <div className='sm:py-15 px-5 bg-gray-900 py-20'>
+      <motion.section
+        {...Animations}
+        className={clsx(
+          'flex flex-col overflow-hidden mx-auto max-w-screen-lg'
+        )}
+      >
+        {compare.map(({ id, headings, features, buttons }) => (
+          <div key={id} className="overflow-hidden rounded-lg border border-gray-700">
+            <table className="block min-w-full divide-y divide-gray-700 overflow-x-auto md:inline-table md:overflow-x-hidden">
+              <thead className="bg-gray-800 text-gray-300">
+                <tr>
+                  {headings.map(({ id, heading }) => (
+                    <th
+                      key={id}
+                      scope="col"
+                      className="px-6 py-3 text-center font-bold uppercase "
+                    >
+                      {heading}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-700">
+                {features.map(({ id, title, point1, point2 }) => (
+                  <tr key={id}>
+                    <td className="border-r-[1px] border-gray-700 px-8 py-4 text-sm font-bold text-gray-300">
+                      {title}
+                    </td>
+                    <td className="whitespace-nowrap border-r-[1px] border-gray-700 px-6 py-4 text-center text-sm text-gray-300">
+                      {typeof point1 === 'object' ? (
+                        point1.map((item) => <p key={item.id}>{item.text}</p>)
+                      ) : (
+                        <p>{point1}</p>
+                      )}
+                    </td>
+                    <td className="whitespace-nowrap px-6 py-4 text-center text-sm text-gray-300">
+                      {typeof point2 === 'object' ? (
+                        point2.map((item) => <p key={item.id}>{item.text}</p>)
+                      ) : (
+                        <p>{point2}</p>
+                      )}
+                    </td>
+                  </tr>
                 ))}
-                <button className="hover: my-5 rounded-lg bg-cyan-600 py-2 px-4 duration-200 hover:bg-cyan-500">
-                  Select Classic
-                </button>
-              </div>
-            ))}
+                {buttons.map(({ id, title, button1, button2 }) => (
+                  <tr key={id}>
+                    <td className="border-r-[1px] border-gray-700 px-8 py-4 text-sm font-bold text-gray-300">
+                      {title}
+                    </td>
+                    <td className="whitespace-nowrap border-r-[1px] border-gray-700 px-6 py-4 text-center text-sm text-gray-300">
+                      <Link href="/register">
+                        <a className="rounded-md border-[1px] border-black bg-black px-8 py-3 text-gray-300 duration-300 hover:bg-white hover:text-black">
+                          {button1}
+                        </a>
+                      </Link>
+                    </td>
+                    <td className="whitespace-nowrap border-r-[1px] border-gray-700 px-6 py-4 text-center text-sm text-gray-300">
+                      <Link href="/register">
+                        <a className="rounded-md border-[1px] border-black bg-black px-8 py-3 text-gray-300 duration-300 hover:bg-white hover:text-black">
+                          {button2}
+                        </a>
+                      </Link>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
-        </div>
-      </motion.div>
-    </section>
+        ))}
+      </motion.section>
+    </div>
   )
 }
 

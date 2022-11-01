@@ -311,7 +311,7 @@ function AppDemo() {
                 onChangeActivePointIndex={setActivePointIndex}
               />
             </div>
-            <div className="mt-4 rounded-lg bg-cyan-500 py-2 px-4 text-center text-sm font-semibold text-white">
+            <div className="mt-4 rounded-lg bg-[#28a745] py-2 px-4 text-center text-sm font-semibold text-white">
               Trade
             </div>
             <div className="mt-3 divide-y divide-gray-100 text-sm">

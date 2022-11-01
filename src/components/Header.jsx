@@ -40,7 +40,9 @@ export function Header() {
         <Container className="relative z-50 flex justify-between py-8">
           <div className="relative z-10 flex items-center gap-16">
             <Link href="/" aria-label="Home">
+              <span className='w-20 h-12'>
               <Image src={logo} alt="FT9ja Logo" className='cursor-pointer' />
+              </span>
             </Link>
             <div className="hidden justify-between lg:flex">
               <Link href="/how-it-works">
@@ -68,7 +70,7 @@ export function Header() {
                   Support/FAQs
                 </a>
               </Link>
-              <Link href="#">
+              <Link href="https://www.community.ft9ja.com/">
                 <a
                   className={`mx-1 rounded-lg p-3 ${
                     router.pathname === '#' ? 'bg-slate-200' : ''
@@ -157,7 +159,7 @@ export function Header() {
                                 Support/FAQs
                               </a>
                             </Link>
-                            <Link href="#">
+                            <Link href="https://www.community.ft9ja.com/">
                               <a
                                 className={`rounded-lg p-3 ${
                                   router.pathname === '/contact'

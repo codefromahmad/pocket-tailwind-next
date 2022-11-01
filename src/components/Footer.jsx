@@ -6,7 +6,6 @@ import { useRouter } from 'next/router'
 import logo from '../images/logo.png'
 import { ImFacebook, ImTwitter, ImYoutube } from 'react-icons/im'
 import { GrInstagram } from 'react-icons/gr'
-import { Button } from './Button'
 
 function PlayIcon(props) {
   return (
@@ -26,10 +25,12 @@ export function Footer() {
   return (
     <footer className="bg-white">
       <Container>
-        <div className="mx-auto grid max-w-[425px] grid-cols-1 pt-14 pb-8 md:max-w-screen-2xl md:grid-cols-3 md:gap-10 lg:gap-20 lg:py-15">
+        <div className="lg:py-15 mx-auto grid max-w-[425px] grid-cols-1 pt-14 pb-8 md:max-w-screen-2xl md:grid-cols-3 md:gap-10 lg:gap-20">
           <div className="flex   flex-col text-gray-900">
-            <Image src={logo} alt="FT9ja Logo" className="cursor-pointer" />
-            <div className="ml-2">
+            <span className="h-12 w-28 pl-2">
+              <Image src={logo} alt="FT9ja Logo" className="cursor-pointer" />
+            </span>
+            <div className="ml-2 pt-3">
               <p className="mt-1 text-justify text-sm">
                 We are Nigeria&apos;s 1st next-generational proprietary trading
                 firm. Our aim is to scout for talented but undercapitalized
@@ -91,7 +92,7 @@ export function Footer() {
             </h1>
             <div className="flex text-center  md:text-right">
               <Link href="https://temp-app-pockettailwind.herokuapp.com/#pricing">
-                <a className="rounded-xl mr-2 border-[1px] border-black bg-black py-3 px-8 text-center text-base text-white duration-300 hover:border-[1px] hover:bg-white hover:text-black">
+                <a className="mr-2 rounded-xl border-[1px] border-black bg-black py-3 px-8 text-center text-base text-white duration-300 hover:border-[1px] hover:bg-white hover:text-black">
                   Start Trading
                 </a>
               </Link>
