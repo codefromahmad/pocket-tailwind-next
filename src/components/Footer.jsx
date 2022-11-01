@@ -28,7 +28,7 @@ export function Footer() {
       <Container>
         <div className="mx-auto grid max-w-[425px] grid-cols-1 pt-14 pb-8 md:max-w-screen-2xl md:grid-cols-3 md:gap-10 lg:gap-20 lg:py-10">
           <div className="flex   flex-col text-gray-900">
-            <Image src={logo} alt="alsdkjf" />
+            <Image src={logo} alt="FT9ja Logo" className="cursor-pointer" />
             <div className="ml-2">
               <p className="mt-1 text-justify text-sm">
                 We are Nigeria&apos;s 1st next-generational proprietary trading
@@ -86,27 +86,15 @@ export function Footer() {
             </div>
           </div>
           <div className="flex flex-col">
-            <h1 className="mb-8 text-center text-2xl font-bold md:text-left">
+            <h1 className="mb-8 text-center text-2xl font-bold">
               Apply Online
             </h1>
-            <div className="text-center flex  md:text-right">
+            <div className="flex text-center  md:text-right">
               <Link href="https://temp-app-pockettailwind.herokuapp.com/#pricing">
-                <a className="rounded-xl border-[1px] border-black bg-black py-3 px-8 text-base text-white duration-300 hover:border-[1px] hover:bg-white hover:text-black">
+                <a className="rounded-xl border-[1px] border-black bg-black w-full text-center py-3 px-8 text-base text-white duration-300 hover:border-[1px] hover:bg-white hover:text-black">
                   Start Trading
                 </a>
               </Link>
-              <Button
-                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                variant="outline"
-              >
-                <a
-                  target="_blank"
-                  className="flex ml-2 cursor-pointer items-center rounded-md border-[1px] border-slate-400 px-2"
-                >
-                  <PlayIcon className="h-6 w-6 flex-none" />
-                  <span className="ml-2">Watch the video</span>
-                </a>
-              </Button>
             </div>
           </div>
         </div>

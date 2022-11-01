@@ -25,7 +25,7 @@ export function AuthLayout({ title, subtitle, children }) {
     <main className="flex min-h-full overflow-hidden pt-16 sm:py-28">
       <div className="mx-auto flex w-full max-w-2xl flex-col px-4 sm:px-6">
         <Link href="/" aria-label="Home">
-          <span className="h-10 w-28 self-center">
+          <span className="h-10 cursor-pointer w-28 self-center">
             <Image src={logo} alt="alsdkjf" className='' />
           </span>
         </Link>

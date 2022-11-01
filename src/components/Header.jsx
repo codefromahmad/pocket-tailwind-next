@@ -40,7 +40,7 @@ export function Header() {
         <Container className="relative z-50 flex justify-between py-8">
           <div className="relative z-10 flex items-center gap-16">
             <Link href="/" aria-label="Home">
-              <Image src={logo} alt="alsdkjf" />
+              <Image src={logo} alt="FT9ja Logo" className='cursor-pointer' />
             </Link>
             <div className="hidden justify-between lg:flex">
               <Link href="/how-it-works">

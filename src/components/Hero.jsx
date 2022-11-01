@@ -352,7 +352,7 @@ export function Hero() {
             </p>
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
               <Link href="https://temp-app-pockettailwind.herokuapp.com/#pricing">
-                <a className="rounded-md bg-black py-2 px-5 text-white duration-300 hover:bg-gray-800">
+                <a className="rounded-md border-[1px] border-black bg-black py-2 px-5 text-white duration-300 hover:bg-white hover:text-black">
                   Start Trading
                 </a>
               </Link>
@@ -360,9 +360,12 @@ export function Hero() {
                 href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
                 variant="outline"
               >
-                <a target='_blank' className='px-2 rounded-md border-[1px] border-slate-200 cursor-pointer flex items-center'>
+                <a
+                  target="_blank"
+                  className="flex cursor-pointer hover:border-black hover:bg-black hover:text-white duration-300 items-center rounded-md border-[1px] border-slate-200 px-2"
+                >
                   <PlayIcon className="h-6 w-6 flex-none" />
-                  <span className='ml-2'>Watch the video</span>
+                  <span className="ml-2">Watch the video</span>
                 </a>
               </Button>
             </div>

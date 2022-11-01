@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import img1 from '../images/Avatar_1.png'
 import img3 from '../images/Avatar_3.png'
+import { IconContext } from 'react-icons'
 
 // Import Swiper styles
 import 'swiper/swiper-bundle.min.css'
@@ -11,6 +12,7 @@ import 'swiper/swiper.min.css'
 // import Swiper core and required modules
 import SwiperCore, { Pagination, Navigation } from 'swiper/core'
 import Image from 'next/image'
+import { GrFormNextLink, GrFormPreviousLink } from 'react-icons/gr'
 
 // install Swiper modules
 SwiperCore.use([Pagination, Navigation])
@@ -49,6 +51,9 @@ export default function App() {
     },
   ]
 
+  const [prevEl, setPrevEl] = useState(null)
+  const [nextEl, setNextEl] = useState(null)
+
   return (
     <>
       <div className="w-full bg-gray-900">
@@ -70,7 +75,7 @@ export default function App() {
               </p>
             </span>
           </div>
-          <div className="px-5 sm:px-10">
+          <div className="relative px-10">
             <Swiper
               onSlideChange={(swiper) => setSwiperRef(swiper.activeIndex)}
               breakpoints={{
@@ -83,30 +88,31 @@ export default function App() {
               }}
               centeredSlides={true}
               spaceBetween={30}
-              navigation={true}
+              navigation={{ prevEl, nextEl }}
+              // navigation={true}
             >
-              <SwiperSlide className="text-white">
+              <SwiperSlide className="text-white text-justify">
                 Slide 1 Lorem Ipsum is simply dummy text of the printing and
                 typesetting industry. Lorem Ipsum has been the industrys
                 standard dummy text ever since the 1500s, when an unknown
                 printer took a galley of type and scrambled it to make a type
                 specimen book. It has survived not only five centuries.
               </SwiperSlide>
-              <SwiperSlide className="text-white">
+              <SwiperSlide className="text-white text-justify">
                 Slide 1 Lorem Ipsum is simply dummy text of the printing and
                 typesetting industry. Lorem Ipsum has been the industrys
                 standard dummy text ever since the 1500s, when an unknown
                 printer took a galley of type and scrambled it to make a type
                 specimen book. It has survived not only five centuries.
               </SwiperSlide>
-              <SwiperSlide className="text-white">
+              <SwiperSlide className="text-white text-justify">
                 Slide 1 Lorem Ipsum is simply dummy text of the printing and
                 typesetting industry. Lorem Ipsum has been the industrys
                 standard dummy text ever since the 1500s, when an unknown
                 printer took a galley of type and scrambled it to make a type
                 specimen book. It has survived not only five centuries.
               </SwiperSlide>
-              <SwiperSlide className="text-white">
+              <SwiperSlide className="text-white text-justify">
                 Slide 1 Lorem Ipsum is simply dummy text of the printing and
                 typesetting industry. Lorem Ipsum has been the industrys
                 standard dummy text ever since the 1500s, when an unknown
@@ -114,6 +120,22 @@ export default function App() {
                 specimen book. It has survived not only five centuries.
               </SwiperSlide>
             </Swiper>
+            <div
+              ref={(node) => setPrevEl(node)}
+              className="absolute shadow-gray-500 shadow-md bottom-[40%] md:-ml-6 -ml-1.5 left-0 h-10 w-10 cursor-pointer rounded-full bg-white"
+            >
+              <span className="flex justify-center pt-[7px]">
+                <GrFormPreviousLink size="1.5rem" />
+              </span>
+            </div>
+            <div
+              ref={(node) => setNextEl(node)}
+              className="absolute bottom-[40%] shadow-gray-500 shadow-md md:-mr-6 -mr-1.5 right-0 h-10 w-10 cursor-pointer rounded-full bg-white"
+            >
+              <span className="flex justify-center pt-[7px]">
+                <GrFormNextLink size="1.5rem" />
+              </span>
+            </div>
           </div>
         </div>
       </div>
