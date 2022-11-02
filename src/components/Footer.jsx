@@ -27,9 +27,11 @@ export function Footer() {
       <Container>
         <div className="lg:py-15 mx-auto grid max-w-[425px] grid-cols-1 pt-14 pb-8 md:max-w-screen-2xl md:grid-cols-3 md:gap-10 lg:gap-20">
           <div className="flex   flex-col text-gray-900">
-            <span className="h-12 w-28 pl-2">
-              <Image src={logo} alt="FT9ja Logo" className="cursor-pointer" />
-            </span>
+            <Link href="/">
+              <span className="h-12 w-28 pl-2">
+                <Image src={logo} alt="FT9ja Logo" className="cursor-pointer" />
+              </span>
+            </Link>
             <div className="ml-2 pt-3">
               <p className="mt-1 text-justify text-sm">
                 We are Nigeria&apos;s 1st next-generational proprietary trading

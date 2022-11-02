@@ -8,14 +8,88 @@ import { useRef } from 'react'
 const faqs = [
   {
     id: 1,
-    question: 'How does this work?',
+    question: 'How does this work',
     list: '',
-    answer:
-      'Our whole business depends on our tips being good, so it’s in our best interest that they are. The results of our customers speak for themselves, just trust us.',
+    lists: [
+      {
+        id: 1,
+        title: 'STEP 1: Sign up at FT9ja.com',
+        line: '',
+        litems: [
+          {
+            id: 1,
+            li: 'We provide 3 Account Sizes for Traders to start with: $3,000 (N2,100,000), $5,000 (N3,500,000), and $25,000 (N17,500,000).',
+          },
+          {
+            id: 2,
+            li: 'Pay the one-time fee, and you’ll receive the login details to the server of Broker on the MT4/MT5 platform within 24 hours of purchase!',
+          },
+          {
+            id: 3,
+            li: 'This account, the ZumaRock Account, is the account you’ll begin trading with.',
+          },
+        ],
+      },
+      {
+        id: 2,
+        title: 'STEP 2: Start Trading',
+        line: 'There are 2 ways to earn:',
+        litems: [
+          {
+            id: 1,
+            li: 'The first way to earn: Talent Bonus in Zuma Account.',
+            more: [
+              {
+                id: 1,
+                text: 'You can choose between the weekly or monthly payout plans.',
+              },
+              {
+                id: 2,
+                text: 'You get paid 5% of the profit at the end of the week as the Talent Bonus. Or if you choose the monthly payout plan, you get paid 10% at the end of month.',
+              },
+              {
+                id: 3,
+                text: 'Note: the Maximum Talent Bonus is 5% of the Account Size.',
+              },
+            ],
+          },
+          {
+            id: 2,
+            li: 'Second way To earn: Profit Split in Aso Account.',
+            more: [
+              {
+                id: 1,
+                text: 'Grow your Zuma Account to 25% of your starting Account Size to qualify for Aso Account.',
+              },
+              {
+                id: 2,
+                text: '80% Profit Split: if you qualify for the Aso Account within 1 months of placing your first trade.',
+              },
+              {
+                id: 3,
+                text: '60% Profit Split: if you qualify for the Aso Account within 1-3 months.',
+              },
+              {
+                id: 4,
+                text: '40% Profit Split: if you qualify for the Aso Account after 3 months.',
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: 3,
+        title: 'STEP 3: Get Paid Weekly or Monthly',
+        line: 'You choose your medium of getting paid: bank account or Paypal. You choose between weekly or monthly payouts. Payouts are issued every week as you have traded for 2 separate days in the preceding week. Or monthly as long as you have traded for 10 separate days in the preceding month. It is as simple as this getting paid with FT9ja',
+        litems: [],
+      },
+    ],
+    answer: '',
   },
   {
     id: 2,
     question: 'What are the rules?',
+    lists: '',
     answer: '',
     list: [
       {
@@ -35,12 +109,14 @@ const faqs = [
   {
     id: 3,
     question: 'What is the Zuma Account?',
+    lists: '',
     list: '',
     answer: `Every Trader starts with a ZumaRock Account. ZumaRock Accounts are the gateway to AsoRock Accounts. Although ZumaRock Accounts are demo accounts, you still get paid 5% weekly or 10% monthly on the profit you make! That's the Talent Bonus.`,
   },
   {
     id: 4,
     question: 'What is the Aso Account?',
+    lists: '',
     answer: '',
     list: [
       {
@@ -58,6 +134,7 @@ const faqs = [
   {
     id: 5,
     question: 'Are you a Broker?',
+    lists: '',
     answer: '',
     list: [
       {
@@ -73,6 +150,7 @@ const faqs = [
   {
     id: 6,
     question: 'Is this an investment offer?',
+    lists: '',
     answer: '',
     list: [
       {
@@ -89,12 +167,14 @@ const faqs = [
     id: 7,
     list: '',
     question: 'Will I be responsible for losses?',
+    lists: '',
     answer: 'No! We cover the losses.',
   },
   {
     id: 8,
     list: '',
     question: 'Which Brokers do you offer?',
+    lists: '',
     answer: 'You can choose between IC Markets, FXTM, and Deriv.',
   },
 ]
@@ -140,7 +220,7 @@ export function Faqs() {
           </p>
         </div>
         <div className="mx-auto grid grid-cols-1 gap-5 lg:max-w-screen-md">
-          {faqs.map(({ id, question, list, answer }, idx) => (
+          {faqs.map(({ id, question, list, answer, lists }, idx) => (
             <Disclosure key={id}>
               {({ open }) => (
                 <>
@@ -181,18 +261,36 @@ export function Faqs() {
                       {open && (
                         <Disclosure.Panel
                           static
-                          className="my-2 flex w-full justify-between rounded-lg text-left"
+                          className="my-2 flex w-full flex-col justify-between rounded-lg text-left"
                         >
                           {answer && answer}
                           {list && (
-                            <ul className="list-item ml-3">
+                            <ul className="ml-3 list-item">
                               {list.map(({ id, title }) => (
-                                <li className="list-disc ml-2 py-1" key={id}>
+                                <li className="ml-2 list-disc py-1" key={id}>
                                   {title}
                                 </li>
                               ))}
                             </ul>
                           )}
+                          {lists &&
+                            lists.map(({ id, title, line, litems }) => (
+                              <div key={id}>
+                                <h1 className="py-4 text-[#28a745]">
+                                  {title}
+                                </h1>
+                                {line && <p className='py-2'>{line}</p>}
+                                {litems.map(({ id, li, more }) => (
+                                  <>
+                                    <li key={id} className="py-2">{li}</li>
+                                    {more &&
+                                      more.map(({ id, text }) => (
+                                        <p key={id} className="pl-6 py-1">{text}</p>
+                                      ))}
+                                  </>
+                                ))}
+                              </div>
+                            ))}
                         </Disclosure.Panel>
                       )}
                     </Transition>

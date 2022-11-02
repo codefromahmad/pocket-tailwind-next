@@ -57,7 +57,7 @@ export default function App() {
   return (
     <>
       <div className="w-full bg-gray-900">
-        <div className="mx-auto max-w-screen-md py-10 px-5 sm:px-10 md:py-16">
+        <div className="mx-auto max-w-screen-md py-10 px-5 sm:px-10 md:py-20">
           <h1 className="pb-5 text-center text-3xl font-bold text-white sm:text-left">
             Meet Sam
           </h1>

@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react'
-import { RadioGroup } from '@headlessui/react'
+import { Fragment, useEffect, useState } from 'react'
+import { Dialog, Disclosure, RadioGroup, Transition } from '@headlessui/react'
 import clsx from 'clsx'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { Container } from '@/components/Container'
 import Link from 'next/link'
 
@@ -29,6 +29,7 @@ const plans = [
         step: '',
         text: '1 step : 25% profit target',
         desc: '',
+        points: '',
       },
       {
         id: 2,
@@ -42,35 +43,68 @@ const plans = [
         title: 'Profit Split',
         step: '',
         text: 'Up to 80% to the trader',
-        desc: '',
+        desc: 'Grow your Zuma Account to 25% of your starting Account Size to qualify for Aso Account.',
+        points: [
+          {
+            id: 1,
+            point:
+              '80% Profit Split: if you qualify for the Aso Account within 3 months of placing your first trade.',
+          },
+          {
+            id: 2,
+            point:
+              '65% Profit Split: if you qualify for the Aso Account within 3-6 months.',
+          },
+          {
+            id: 3,
+            point:
+              '50% Profit Split: if you qualify for the Aso Account after 6 months.',
+          },
+        ],
       },
       {
         id: 4,
         title: 'Talent Bonus',
         step: '',
         text: '5% weekly or 10% monthly to the Trader',
-        desc: '',
+        desc: 'While you earn a Profit Split on the Aso Account, you earn a Talent Bonus on the Zuma Account.',
+        points: [
+          {
+            id: 1,
+            point: 'You can choose between the weekly or monthly payout plans.',
+          },
+          {
+            id: 2,
+            point:
+              'You get paid 5% of the profit at the end of the week as the Talent Bonus.',
+          },
+          {
+            id: 3,
+            point:
+              'Or if you choose the monthly payout plan, you get paid 10% at the end of month.',
+          },
+        ],
       },
       {
         id: 5,
         title: 'Available Leverage',
         step: '',
         text: '1:100',
-        desc: '',
+        desc: '100 is the maximum leverage. You can use a lower leverage.',
       },
       {
         id: 6,
         title: 'Max. Daily DrawDown',
         step: '',
         text: '5%',
-        desc: '',
+        desc: `You are allowed a maximum daily drawdown of 5%. Daily drawdown is calculated using the equity at 00:00 WAT. As such, it is not fixed like Account Drawdown. Drawdown refers to the equity not balance. It takes into account the closed trades and the floating trades.`,
       },
       {
         id: 7,
         title: 'Max. Account DrawDown',
         step: '',
         text: '10%',
-        desc: '',
+        desc: `You are allowed a maximum overall account drawdown of 10%. That is $2,700 for a $3,000 account, $4,500 for a $5,000 account, and $22,500 for a $25,000 account Drawdown refers to the equity not balance. It takes into account the closed trades and the floating trades.`,
       },
       {
         id: 8,
@@ -84,7 +118,7 @@ const plans = [
         title: 'Second Change Account',
         step: '',
         text: '1 free account in case you blow your first account',
-        desc: '',
+        desc: 'Bad network? ‘down NEPA’? stuck in traffic and can’t place that trade? We can relate. If you blow your first Zuma Account, just request for a Second Chance Account. It’s FREE.',
       },
       {
         id: 10,
@@ -104,7 +138,7 @@ const plans = [
             text: 'N180,000',
           },
         ],
-        desc: '',
+        desc: 'No monthly charges or other hidden fees.',
       },
     ],
     prices: [
@@ -143,6 +177,8 @@ const plans = [
         id: 1,
         title: 'Evaluation',
         step: '2 Steps : ',
+        desc: '',
+        points: '',
         text: [
           {
             id: 1,
@@ -159,6 +195,7 @@ const plans = [
         id: 2,
         title: 'Time limit',
         step: '   ',
+        desc: '',
         text: [
           {
             id: 1,
@@ -176,27 +213,44 @@ const plans = [
         title: 'Profit Split',
         step: '',
         text: 'Up to 80% to the trader',
-        desc: '',
+        desc: 'Grow your Zuma Account to 25% of your starting Account Size to qualify for Aso Account.',
+        points: [
+          {
+            id: 1,
+            point:
+              '80% Profit Split: if you qualify for the Aso Account within 3 months of placing your first trade.',
+          },
+          {
+            id: 2,
+            point:
+              '65% Profit Split: if you qualify for the Aso Account within 3-6 months.',
+          },
+          {
+            id: 3,
+            point:
+              '50% Profit Split: if you qualify for the Aso Account after 6 months.',
+          },
+        ],
       },
       {
         id: 5,
         title: 'Available Leverage',
         text: '1:100',
-        desc: '',
+        desc: '100 is the maximum leverage. You can use a lower leverage.',
       },
       {
         id: 6,
         title: 'Max. Daily DrawDown',
         step: '',
         text: '5%',
-        desc: '',
+        desc: `You are allowed a maximum daily drawdown of 5%. Daily drawdown is calculated using the equity at 00:00 WAT. As such, it is not fixed like Account Drawdown. Drawdown refers to the equity not balance. It takes into account the closed trades and the floating trades.`,
       },
       {
         id: 7,
         title: 'Max. Account DrawDown',
         step: '',
         text: '10%',
-        desc: '',
+        desc: `You are allowed a maximum overall account drawdown of 10%. That is $2,700 for a $3,000 account, $4,500 for a $5,000 account, and $22,500 for a $25,000 account Drawdown refers to the equity not balance. It takes into account the closed trades and the floating trades.`,
       },
       {
         id: 8,
@@ -223,7 +277,7 @@ const plans = [
             text: 'N180,000',
           },
         ],
-        desc: '',
+        desc: 'No monthly charges or other hidden fees.',
       },
     ],
     prices: [
@@ -395,6 +449,66 @@ const Animations = {
   },
 }
 
+function Collapsible({ id, title, text, step, desc, points }) {
+  const [isOpen, setIsOpen] = useState(false)
+
+  return (
+    <>
+      <tr key={id}>
+        <td className="border-r-[1px] border-gray-200 px-8 py-4 text-sm font-medium text-gray-800">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="rounded-md bg-slate-200 px-6 py-2 duration-200 hover:bg-slate-300"
+          >
+            {title}
+          </button>
+        </td>
+        {typeof text !== 'object' ? (
+          <td
+            colSpan="3"
+            className="whitespace-nowrap px-6 py-4 text-center text-sm text-gray-800"
+          >
+            {text}
+          </td>
+        ) : !step ? (
+          text.map(({ id, text }) => (
+            <td
+              key={id}
+              className="whitespace-nowrap border-r-[1px] border-gray-200 px-6 py-4 text-center text-sm text-gray-800"
+            >
+              {text}
+            </td>
+          ))
+        ) : (
+          <td
+            key={id}
+            colSpan="3"
+            className="whitespace-nowrap border-r-[1px] border-gray-200 px-6 py-4 text-center text-sm text-gray-800"
+          >
+            <p className="font-bold">{step}</p>
+            {text.map(({ id, text }) => (
+              <p key={id}>{text}</p>
+            ))}
+          </td>
+        )}
+      </tr>
+      <tr key={id} className={`${isOpen ? '' : 'hidden'} bg-slate-100`}>
+        <td colSpan="4" className="whitespace-pre-wrap py-3 px-6">
+          <div className="py-2">
+            <p className="">{desc}</p>
+            {points &&
+              points.map(({ id, point }) => (
+                <li key={id} className="py-1">
+                  {point}
+                </li>
+              ))}
+          </div>
+        </td>
+      </tr>
+    </>
+  )
+}
+
 function Plan({ plan }) {
   return (
     <motion.section
@@ -404,8 +518,8 @@ function Plan({ plan }) {
       )}
     >
       {plan?.map(({ name, headings, features, prices }) => (
-        <div key={name} className="rounded-lg overflow-hidden border">
-          <table className="block min-w-full divide-y divide-gray-200 overflow-x-auto lg:overflow-x-hidden whitespace-nowrap lg:inline-table">
+        <div key={name} className="overflow-hidden rounded-lg border">
+          <table className="block min-w-full divide-y divide-gray-200 overflow-x-auto whitespace-nowrap lg:inline-table lg:overflow-x-hidden">
             <thead className="bg-gray-800 text-white">
               <tr>
                 <th
@@ -424,40 +538,55 @@ function Plan({ plan }) {
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-200">
-              {features.map(({ id, title, text, step, desc }) => (
-                <tr key={id}>
-                  <td className="border-r-[1px] border-gray-200 px-8 py-4 text-sm font-medium text-gray-800">
-                    {title}
-                  </td>
-                  {typeof text !== 'object' ? (
-                    <td
-                      colSpan="3"
-                      className="whitespace-nowrap px-6 py-4 text-center text-sm text-gray-800"
-                    >
-                      {text}
-                    </td>
-                  ) : !step ? (
-                    text.map(({ id, text }) => (
-                      <td
-                        key={id}
-                        className="whitespace-nowrap border-r-[1px] border-gray-200 px-6 py-4 text-center text-sm text-gray-800"
-                      >
-                        {text}
-                      </td>
-                    ))
+              {features.map(({ id, title, text, step, desc, points }) => (
+                <>
+                  {desc ? (
+                    <>
+                      <Collapsible
+                        id={id}
+                        title={title}
+                        text={text}
+                        step={step}
+                        desc={desc}
+                        points={points}
+                      />
+                    </>
                   ) : (
-                    <td
-                      key={id}
-                      colSpan="3"
-                      className="whitespace-nowrap border-r-[1px] border-gray-200 px-6 py-4 text-center text-sm text-gray-800"
-                    >
-                      <p className="font-bold">{step}</p>
-                      {text.map(({ id, text }) => (
-                        <p key={id}>{text}</p>
-                      ))}
-                    </td>
+                    <tr key={id}>
+                      <td className="border-r-[1px] border-gray-200 px-8 py-4 text-sm font-medium text-gray-800">
+                        {title}
+                      </td>
+                      {typeof text !== 'object' ? (
+                        <td
+                          colSpan="3"
+                          className="whitespace-nowrap px-6 py-4 text-center text-sm text-gray-800"
+                        >
+                          {text}
+                        </td>
+                      ) : !step ? (
+                        text.map(({ id, text }) => (
+                          <td
+                            key={id}
+                            className="whitespace-nowrap border-r-[1px] border-gray-200 px-6 py-4 text-center text-sm text-gray-800"
+                          >
+                            {text}
+                          </td>
+                        ))
+                      ) : (
+                        <td
+                          key={id}
+                          colSpan="3"
+                          className="whitespace-nowrap border-r-[1px] border-gray-200 px-6 py-4 text-center text-sm text-gray-800"
+                        >
+                          <p className="font-bold">{step}</p>
+                          {text.map(({ id, text }) => (
+                            <p key={id}>{text}</p>
+                          ))}
+                        </td>
+                      )}
+                    </tr>
                   )}
-                </tr>
+                </>
               ))}
               <tr>
                 <td></td>
@@ -509,9 +638,7 @@ function Compare() {
             <tbody className="divide-y divide-gray-200">
               {features.map(({ id, title, point1, point2 }) => (
                 <tr key={id}>
-                  <td
-                    className="border-r-[1px] border-gray-200 px-8 py-4 text-sm font-bold font-medium text-gray-800"
-                  >
+                  <td className="border-r-[1px] border-gray-200 px-8 py-4 text-sm font-bold font-medium text-gray-800">
                     {title}
                   </td>
                   <td className="whitespace-nowrap border-r-[1px] border-gray-200 px-6 py-4 text-center text-sm text-gray-800">
@@ -532,9 +659,7 @@ function Compare() {
               ))}
               {buttons.map(({ id, title, button1, button2 }) => (
                 <tr key={id}>
-                  <td
-                    className="border-r-[1px] border-gray-200 px-8 py-4 text-sm font-bold font-medium text-gray-800"
-                  >
+                  <td className="border-r-[1px] border-gray-200 px-8 py-4 text-sm font-bold font-medium text-gray-800">
                     {title}
                   </td>
                   <td className="whitespace-nowrap border-r-[1px] border-gray-200 px-6 py-4 text-center text-sm text-gray-800">
@@ -657,4 +782,24 @@ export function Pricing() {
       </Container>
     </section>
   )
+}
+
+{
+  /* {desc ? (
+                    <>
+                      <td className="border-r-[1px] border-gray-200 px-8 py-4 text-sm font-medium text-gray-800">
+                        <button
+                          type="button"
+                          onClick={() => setIsOpen(true)}
+                          className="rounded-md bg-slate-400 bg-opacity-20 px-4 py-2 text-sm font-medium hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+                        >
+                          {title}
+                        </button>
+                      </td>
+                    </>
+                  ) : (
+                    <td className="border-r-[1px] border-gray-200 px-8 py-4 text-sm font-medium text-gray-800">
+                      {title}
+                    </td>
+                  )} */
 }
