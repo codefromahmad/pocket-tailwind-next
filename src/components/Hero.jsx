@@ -48,8 +48,8 @@ function BackgroundIllustration(props) {
             y2="1025"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#06b6d4" />
-            <stop offset="1" stopColor="#06b6d4" stopOpacity="0" />
+            <stop stopColor="#28a745" />
+            <stop offset="1" stopColor="#28a745" stopOpacity="0" />
           </linearGradient>
         </defs>
       </svg>
@@ -78,8 +78,8 @@ function BackgroundIllustration(props) {
             y2="913"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#06b6d4" />
-            <stop offset="1" stopColor="#06b6d4" stopOpacity="0" />
+            <stop stopColor="#28a745" />
+            <stop offset="1" stopColor="#28a745" stopOpacity="0" />
           </linearGradient>
         </defs>
       </svg>
@@ -211,7 +211,7 @@ function Chart({
         strokeLinejoin="round"
         initial={{ pathLength: 0 }}
         transition={{ duration: 1 }}
-        {...(isInView ? { stroke: '#06b6d4', animate: { pathLength: 1 } } : {})}
+        {...(isInView ? { stroke: '#28a745', animate: { pathLength: 1 } } : {})}
         onUpdate={({ pathLength }) => {
           pathWidth.set(
             pathRef.current.getPointAtLength(
@@ -228,7 +228,7 @@ function Chart({
             y1={points[activePointIndex].y}
             x2={totalWidth}
             y2={points[activePointIndex].y}
-            stroke="#06b6d4"
+            stroke="#28a745"
             strokeDasharray="1 3"
           />
           <circle
@@ -237,7 +237,7 @@ function Chart({
             cy={points[activePointIndex].y}
             fill="#fff"
             strokeWidth="2"
-            stroke="#06b6d4"
+            stroke="#28a745"
           />
         </>
       )}
@@ -284,7 +284,7 @@ function AppDemo() {
                 <div
                   className={clsx(
                     'ml-auto text-sm tabular-nums tracking-tight',
-                    percentageChange >= 0 ? 'text-cyan-500' : 'text-gray-500'
+                    percentageChange >= 0 ? 'text-[#28a745]' : 'text-gray-500'
                   )}
                 >
                   {`${
@@ -296,7 +296,7 @@ function AppDemo() {
             <div className="mt-6 flex gap-4 text-xs text-gray-500">
               <div>1D</div>
               <div>5D</div>
-              <div className="font-semibold text-cyan-600">1M</div>
+              <div className="font-semibold text-[#28a745]">1M</div>
               <div>6M</div>
               <div>1Y</div>
               <div>5Y</div>

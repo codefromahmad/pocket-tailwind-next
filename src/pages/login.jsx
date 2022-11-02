@@ -16,8 +16,8 @@ export default function Login() {
         subtitle={
           <>
             Don’t have an account?{' '}
-            <Link href="/register" className="text-cyan-600">
-              <span className="cursor-pointer text-green-600">Sign up</span>
+            <Link href="/register">
+              <span className="cursor-pointer text-[#28a745]">Sign up</span>
             </Link>{' '}
             for a free trial.
           </>

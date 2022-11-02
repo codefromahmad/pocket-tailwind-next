@@ -288,7 +288,7 @@ function StocksScreen({ custom, animated = false }) {
                   className={clsx(
                     'text-xs leading-5',
                     stock.change.startsWith('+')
-                      ? 'text-cyan-500'
+                      ? 'text-[#28a745]'
                       : 'text-gray-500'
                   )}
                 >

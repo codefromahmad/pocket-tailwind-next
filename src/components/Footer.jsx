@@ -52,14 +52,14 @@ export function Footer() {
             <div>
               <p className="text-center md:text-left">
                 <span className="font-bold">Email: </span>
-                <a className="text-green-600" href="mailto:info@ft9ja.com">
+                <a className="text-[#28a745]" href="mailto:info@ft9ja.com">
                   info@ft9ja.com
                 </a>
               </p>
               <p className="pt-3 text-center md:text-left">
                 {' '}
                 <span className="font-bold">Whatsapp Number: </span>
-                <span className="text-green-600">+2348138462394</span>
+                <span className="text-[#28a745]">+2348138462394</span>
               </p>
               <p className="text-center text-sm md:text-left">
                 Mon to Fri - 9am to 5pm WAT
@@ -69,7 +69,7 @@ export function Footer() {
               </p>
               <p className="text-center md:text-left">
                 <a
-                  className="text-sm text-green-600"
+                  className="text-sm text-[#28a745]"
                   href="https://calendly.com/ft9ja-lagos"
                 >
                   (Appointments only)
@@ -80,7 +80,7 @@ export function Footer() {
               </p>
               <p className="text-center md:text-left">
                 <a
-                  className="text-sm  text-green-600"
+                  className="text-sm  text-[#28a745]"
                   href="https://calendly.com/ft9ja-lagos"
                 >
                   (Appointments only)

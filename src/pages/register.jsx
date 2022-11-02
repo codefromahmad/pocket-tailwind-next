@@ -16,8 +16,8 @@ export default function Register() {
         subtitle={
           <>
             Already registered?{' '}
-            <Link href="/login" className="text-cyan-600">
-              <span className="cursor-pointer text-green-600">Sign in</span>
+            <Link href="/login" className="">
+              <span className="cursor-pointer text-[#28a745]">Sign in</span>
             </Link>{' '}
             to your account.
           </>
