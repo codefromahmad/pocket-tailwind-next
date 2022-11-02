@@ -638,7 +638,7 @@ function Compare() {
             <tbody className="divide-y divide-gray-200">
               {features.map(({ id, title, point1, point2 }) => (
                 <tr key={id}>
-                  <td className="border-r-[1px] border-gray-200 px-8 py-4 text-sm font-bold font-medium text-gray-800">
+                  <td className="border-r-[1px] border-gray-200 px-8 py-4 text-sm font-bold text-gray-800">
                     {title}
                   </td>
                   <td className="whitespace-nowrap border-r-[1px] border-gray-200 px-6 py-4 text-center text-sm text-gray-800">
@@ -659,7 +659,7 @@ function Compare() {
               ))}
               {buttons.map(({ id, title, button1, button2 }) => (
                 <tr key={id}>
-                  <td className="border-r-[1px] border-gray-200 px-8 py-4 text-sm font-bold font-medium text-gray-800">
+                  <td className="border-r-[1px] border-gray-200 px-8 py-4 text-sm font-bold text-gray-800">
                     {title}
                   </td>
                   <td className="whitespace-nowrap border-r-[1px] border-gray-200 px-6 py-4 text-center text-sm text-gray-800">
@@ -782,24 +782,4 @@ export function Pricing() {
       </Container>
     </section>
   )
-}
-
-{
-  /* {desc ? (
-                    <>
-                      <td className="border-r-[1px] border-gray-200 px-8 py-4 text-sm font-medium text-gray-800">
-                        <button
-                          type="button"
-                          onClick={() => setIsOpen(true)}
-                          className="rounded-md bg-slate-400 bg-opacity-20 px-4 py-2 text-sm font-medium hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
-                        >
-                          {title}
-                        </button>
-                      </td>
-                    </>
-                  ) : (
-                    <td className="border-r-[1px] border-gray-200 px-8 py-4 text-sm font-medium text-gray-800">
-                      {title}
-                    </td>
-                  )} */
 }
