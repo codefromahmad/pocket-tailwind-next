@@ -265,7 +265,7 @@ function AppDemo() {
             <span className="border-r-2 border-gray-400 pr-2">Returns</span>
             <span className="sm:px-2">10%</span>
             <span className="sm:px-2">25%</span>
-            <span className="text-[#28a745] sm:px-2">50%</span>
+            <span className="text-[#28a745] font-bold sm:px-2">50%</span>
             <span className="sm:px-2">100%</span>
           </div>
           <div className="mt-2 flex justify-between gap-2 border-t border-gray-200 py-2">
@@ -273,7 +273,7 @@ function AppDemo() {
               Funding Model
             </span>
             <span className="text-center text-sm sm:px-2">FT9ja Classic</span>
-            <span className="text-center text-sm text-[#28a745] sm:px-2">
+            <span className="text-center text-sm font-bold text-[#28a745] sm:px-2">
               FT9ja Challenge
             </span>
           </div>
@@ -284,7 +284,7 @@ function AppDemo() {
             <span className=" px-1 text-center text-sm">
               $70 trade with $10,000
             </span>
-            <span className=" px-1 text-center text-sm text-[#28a745]">
+            <span className=" px-1 text-center font-bold text-sm text-[#28a745]">
               $143 trade with $25,000
             </span>
           </div>
