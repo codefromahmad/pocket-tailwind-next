@@ -260,81 +260,83 @@ function AppDemo() {
   return (
     <AppScreen>
       <AppScreen.Body>
-        <div className="p-4">
-          <div className="flex gap-2">
-            <div className="text-xs leading-6 text-gray-500">
-              Tailwind Labs, Inc.
-            </div>
-            <div className="text-sm text-gray-900">$CSS</div>
-            <svg viewBox="0 0 24 24" className="ml-auto h-6 w-6" fill="none">
-              <path
-                d="M5 12a7 7 0 1 1 14 0 7 7 0 0 1-14 0ZM12 9v6M15 12H9"
-                stroke="#171717"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+        <div className="p-3">
+          <div className="flex justify-between gap-2">
+            <span className="border-r-2 border-gray-400 pr-2">Returns</span>
+            <span className="sm:px-2">10%</span>
+            <span className="sm:px-2">25%</span>
+            <span className="text-[#28a745] sm:px-2">50%</span>
+            <span className="sm:px-2">100%</span>
           </div>
-          <div className="mt-3 border-t border-gray-200 pt-5">
-            <div className="flex items-baseline gap-2">
-              <div className="text-2xl tabular-nums tracking-tight text-gray-900">
-                {activeValue.toFixed(2)}
-              </div>
-              <div className="text-sm text-gray-900">USD</div>
-              {percentageChange && (
-                <div
-                  className={clsx(
-                    'ml-auto text-sm tabular-nums tracking-tight',
-                    percentageChange >= 0 ? 'text-[#28a745]' : 'text-gray-500'
-                  )}
-                >
-                  {`${
-                    percentageChange >= 0 ? '+' : ''
-                  }${percentageChange.toFixed(2)}%`}
-                </div>
-              )}
+          <div className="mt-2 flex justify-between gap-2 border-t border-gray-200 py-2">
+            <span className="border-r-2 border-gray-400 text-center text-sm sm:px-2">
+              Funding Model
+            </span>
+            <span className="text-center text-sm sm:px-2">FT9ja Classic</span>
+            <span className="text-center text-sm text-[#28a745] sm:px-2">
+              FT9ja Challenge
+            </span>
+          </div>
+          <div className="mt-2 flex justify-between gap-2 border-t border-gray-200 py-2">
+            <span className=" px-1 text-center text-sm">
+              $41 trade with $5,000
+            </span>
+            <span className=" px-1 text-center text-sm">
+              $70 trade with $10,000
+            </span>
+            <span className=" px-1 text-center text-sm text-[#28a745]">
+              $143 trade with $25,000
+            </span>
+          </div>
+          <div className="mt-1 flex items-end justify-between gap-2 border-t border-gray-200 pt-1">
+            <div className="flex flex-col items-center">
+              <p className="pb-2 text-center font-bold">$71.5</p>
+              <span className="h-12 w-20 bg-[#28a745]"></span>
+              {/* <p className="w-20 text-center">Using your own $143</p> */}
             </div>
-            <div className="mt-6 flex gap-4 text-xs text-gray-500">
-              <div>1D</div>
-              <div>5D</div>
-              <div className="font-semibold text-[#28a745]">1M</div>
-              <div>6M</div>
-              <div>1Y</div>
-              <div>5Y</div>
+            <div className="flex flex-col justify-between">
+              <p className="py-10 text-center font-bold text-[#28a745]">
+                140X more returns
+              </p>
             </div>
-            <div className="mt-3 rounded-lg bg-gray-50 ring-1 ring-inset ring-black/5">
-              <Chart
-                width={286}
-                height={208}
-                paddingX={16}
-                paddingY={32}
-                activePointIndex={activePointIndex}
-                onChangeActivePointIndex={setActivePointIndex}
-              />
+            <div className="flex flex-col items-center">
+              <p className="pb-2 text-center font-bold">$10,000</p>
+              <span className="h-[120px] w-20 bg-[#28a745]"></span>
+              {/* <p className="w-20 text-center">
+                Using FT9ja's $25k Account Size
+              </p> */}
             </div>
-            <div className="mt-4 rounded-lg bg-[#28a745] py-2 px-4 text-center text-sm font-semibold text-white">
-              Trade
+          </div>
+          <div className="mt-2 flex justify-between">
+            <div className="">
+              <p className="w-20 text-center text-xs">Using your own $143</p>
             </div>
-            <div className="mt-3 divide-y divide-gray-100 text-sm">
-              <div className="flex justify-between py-1">
-                <div className="text-gray-500">Open</div>
-                <div className="font-medium text-gray-900">6,387.55</div>
-              </div>
-              <div className="flex justify-between py-1">
-                <div className="text-gray-500">Closed</div>
-                <div className="font-medium text-gray-900">6,487.09</div>
-              </div>
-              <div className="flex justify-between py-1">
-                <div className="text-gray-500">Low</div>
-                <div className="font-medium text-gray-900">6,322.01</div>
-              </div>
+            <div className="">
+              <p className="w-20 text-center text-xs">
+                Using FT9ja's $25k Account Size
+              </p>
             </div>
           </div>
         </div>
       </AppScreen.Body>
     </AppScreen>
   )
+}
+
+const Animations = {
+  initial: 'initial',
+  animate: 'animate',
+  variants: {
+    initial: {
+      opacity: 0,
+      y: 100,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 },
+    },
+  },
 }
 
 export function Hero() {
@@ -372,38 +374,17 @@ export function Hero() {
               </Button>
             </div>
           </div>
-          <div className="relative mt-10 sm:mt-20 lg:col-span-5 lg:row-span-2 lg:mt-0 xl:col-span-6">
-            <BackgroundIllustration className="absolute left-1/2 top-4 h-[1026px] w-[1026px] -translate-x-1/3 stroke-gray-300/70 [mask-image:linear-gradient(to_bottom,white_20%,transparent_75%)] sm:top-16 sm:-translate-x-1/2 lg:-top-16 lg:ml-12 xl:-top-14 xl:ml-0" />
-            <div className="-mx-4 h-[448px] px-9 [mask-image:linear-gradient(to_bottom,white_60%,transparent)] sm:mx-0 lg:absolute lg:-inset-x-10 lg:-top-10 lg:-bottom-20 lg:h-auto lg:px-0 lg:pt-10 xl:-bottom-32">
+          <div className="relative mt-10 max-h-[600px] sm:mt-20 lg:col-span-5 lg:row-span-2 lg:mt-0 lg:max-h-[800px] xl:col-span-6">
+            <BackgroundIllustration className="absolute left-1/2 top-4 h-[1026px] w-[1026px] -translate-x-1/3 stroke-gray-300/70 [mask-image:linear-gradient(to_bottom,white_20%,transparent_25%)] sm:top-16 sm:-translate-x-1/2 lg:-top-16 lg:ml-12 xl:-top-14 xl:ml-0" />
+            <motion.div
+              {...Animations}
+              className="-mx-4 h-[480px] px-2 pb-10 sm:h-[440px] lg:absolute lg:-inset-x-10 lg:-top-10 lg:-bottom-20 lg:h-[510px] lg:px-0 lg:pt-6 xl:-bottom-32"
+            >
               <PhoneFrame className="mx-auto max-w-[366px]" priority>
                 <AppDemo />
               </PhoneFrame>
-            </div>
+            </motion.div>
           </div>
-          {/* <div className="relative -mt-4 lg:col-span-7 lg:mt-0 xl:col-span-6">
-            <p className="text-center text-sm font-semibold text-gray-900 lg:text-left">
-              As featured in
-            </p>
-            <ul
-              role="list"
-              className="mx-auto mt-8 flex max-w-xl flex-wrap justify-center gap-x-10 gap-y-8 lg:mx-0 lg:justify-start"
-            >
-              {[
-                ['Forbes', logoForbes],
-                ['TechCrunch', logoTechcrunch],
-                ['Wired', logoWired],
-                ['CNN', logoCnn, 'hidden xl:block'],
-                ['BBC', logoBbc],
-                ['CBS', logoCbs],
-                ['Fast Company', logoFastCompany],
-                ['HuffPost', logoHuffpost, 'hidden xl:block'],
-              ].map(([name, logo, className]) => (
-                <li key={name} className={clsx('flex', className)}>
-                  <Image src={logo} alt={name} className="h-8" unoptimized />
-                </li>
-              ))}
-            </ul>
-          </div> */}
         </div>
       </Container>
     </div>
