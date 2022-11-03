@@ -292,7 +292,6 @@ function AppDemo() {
             <div className="flex flex-col items-center">
               <p className="pb-2 text-center font-bold">$71.5</p>
               <span className="h-12 w-20 bg-[#28a745]"></span>
-              {/* <p className="w-20 text-center">Using your own $143</p> */}
             </div>
             <div className="flex flex-col justify-between">
               <p className="py-10 text-center font-bold text-[#28a745]">
@@ -302,9 +301,6 @@ function AppDemo() {
             <div className="flex flex-col items-center">
               <p className="pb-2 text-center font-bold">$10,000</p>
               <span className="h-[120px] w-20 bg-[#28a745]"></span>
-              {/* <p className="w-20 text-center">
-                Using FT9ja's $25k Account Size
-              </p> */}
             </div>
           </div>
           <div className="mt-2 flex justify-between">
@@ -375,7 +371,7 @@ export function Hero() {
             </div>
           </div>
           <div className="relative mt-10 max-h-[600px] sm:mt-20 lg:col-span-5 lg:row-span-2 lg:mt-0 lg:max-h-[800px] xl:col-span-6">
-            <BackgroundIllustration className="absolute left-1/2 top-4 h-[1026px] w-[1026px] -translate-x-1/3 stroke-gray-300/70 [mask-image:linear-gradient(to_bottom,white_20%,transparent_25%)] sm:top-16 sm:-translate-x-1/2 lg:-top-16 lg:ml-12 xl:-top-14 xl:ml-0" />
+            <BackgroundIllustration className="absolute left-1/2 top-4 h-[1026px] w-[1026px] -translate-x-1/3 stroke-gray-300/70 [mask-image:linear-gradient(to_bottom,white_20%,transparent_60%)] sm:top-16 sm:-translate-x-1/2 lg:-top-16 lg:ml-12 xl:-top-14 xl:ml-0" />
             <motion.div
               {...Animations}
               className="-mx-4 h-[480px] px-2 pb-10 sm:h-[440px] lg:absolute lg:-inset-x-10 lg:-top-10 lg:-bottom-20 lg:h-[510px] lg:px-0 lg:pt-6 xl:-bottom-32"
