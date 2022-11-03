@@ -313,7 +313,7 @@ function AppDemo() {
             </div>
             <div className="">
               <p className="w-20 text-center text-xs">
-                Using FT9ja's $25k Account Size
+                Using FT9ja&apos;s $25k Account Size
               </p>
             </div>
           </div>
