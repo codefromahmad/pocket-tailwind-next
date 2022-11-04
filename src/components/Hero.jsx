@@ -265,10 +265,10 @@ function AppDemo() {
             <span className="border-r-2 border-gray-400 pr-2">Returns</span>
             <span className="sm:px-2">10%</span>
             <span className="sm:px-2">25%</span>
-            <span className="text-[#28a745] font-bold sm:px-2">50%</span>
+            <span className="font-bold text-[#28a745] sm:px-2">50%</span>
             <span className="sm:px-2">100%</span>
           </div>
-          <div className="mt-2 flex justify-between gap-2 border-t border-gray-200 py-2">
+          <div className="mt-1 flex justify-between gap-2 border-t border-gray-200 py-1">
             <span className="border-r-2 border-gray-400 text-center text-sm sm:px-2">
               Funding Model
             </span>
@@ -277,37 +277,43 @@ function AppDemo() {
               FT9ja Challenge
             </span>
           </div>
-          <div className="mt-2 flex justify-between gap-2 border-t border-gray-200 py-2">
-            <span className=" px-1 text-center text-sm">
-              $41 trade with $5,000
+          <div className="mt-1 flex justify-between gap-1 sm:gap-2 border-t border-gray-200 py-1">
+            <span className="px-[1px] sm:px-2 text-center text-sm">
+              $41
+              <br /> Trade with <br /> $5,000
             </span>
-            <span className=" px-1 text-center text-sm">
-              $70 trade with $10,000
+            <span className="px-[1px] sm:px-2 text-center text-sm">
+              $70
+              <br />
+              Trade with
+              <br /> $10,000
             </span>
-            <span className=" px-1 text-center font-bold text-sm text-[#28a745]">
-              $143 trade with $25,000
+            <span className="px-[1px] sm:px-2 text-center text-sm font-bold text-[#28a745]">
+              $143
+              <br /> Trade with
+              <br /> $25,000
             </span>
           </div>
           <div className="mt-1 flex items-end justify-between gap-2 border-t border-gray-200 pt-1">
-            <div className="flex flex-col items-center">
+            <div className="flex pl-4 flex-col items-center">
               <p className="pb-2 text-center font-bold">$71.5</p>
-              <span className="h-12 w-20 bg-[#28a745]"></span>
+              <span className="h-12 w-14 bg-gray-400"></span>
             </div>
             <div className="flex flex-col justify-between">
               <p className="py-10 text-center font-bold text-[#28a745]">
                 140X more returns
               </p>
             </div>
-            <div className="flex flex-col items-center">
+            <div className="flex pr-4 flex-col items-center">
               <p className="pb-2 text-center font-bold">$10,000</p>
-              <span className="h-[120px] w-20 bg-[#28a745]"></span>
+              <span className="h-[120px] w-14 bg-gray-400"></span>
             </div>
           </div>
           <div className="mt-2 flex justify-between">
-            <div className="">
+            <div className="pl-1">
               <p className="w-20 text-center text-xs">Using your own $143</p>
             </div>
-            <div className="">
+            <div className="pr-2">
               <p className="w-20 text-center text-xs">
                 Using FT9ja&apos;s $25k Account Size
               </p>
@@ -350,7 +356,7 @@ export function Hero() {
               you, we take the losses. Join the team of our successful Traders
               now.
             </p>
-            <div className="mt-8 flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-4">
+            <div className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-4 lg:justify-start">
               <Link href="https://temp-app-pockettailwind.herokuapp.com/#pricing">
                 <a className="rounded-md border-[1px] border-black bg-black py-2 px-9 text-white duration-300 hover:bg-white hover:text-black">
                   Start Trading
@@ -362,7 +368,7 @@ export function Hero() {
               >
                 <a
                   target="_blank"
-                  className="flex cursor-pointer py-2 items-center rounded-md border-[1px] border-slate-200 px-2"
+                  className="flex cursor-pointer items-center rounded-md border-[1px] border-slate-200 py-2 px-2"
                 >
                   <PlayIcon className="h-6 w-6 flex-none" />
                   <span className="ml-2">Watch the video</span>
