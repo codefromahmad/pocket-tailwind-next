@@ -350,9 +350,9 @@ export function Hero() {
               you, we take the losses. Join the team of our successful Traders
               now.
             </p>
-            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
+            <div className="mt-8 flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-4">
               <Link href="https://temp-app-pockettailwind.herokuapp.com/#pricing">
-                <a className="rounded-md border-[1px] border-black bg-black py-2 px-5 text-white duration-300 hover:bg-white hover:text-black">
+                <a className="rounded-md border-[1px] border-black bg-black py-2 px-9 text-white duration-300 hover:bg-white hover:text-black">
                   Start Trading
                 </a>
               </Link>
@@ -362,7 +362,7 @@ export function Hero() {
               >
                 <a
                   target="_blank"
-                  className="flex cursor-pointer items-center rounded-md border-[1px] border-slate-200 px-2"
+                  className="flex cursor-pointer py-2 items-center rounded-md border-[1px] border-slate-200 px-2"
                 >
                   <PlayIcon className="h-6 w-6 flex-none" />
                   <span className="ml-2">Watch the video</span>

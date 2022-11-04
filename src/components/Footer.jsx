@@ -92,19 +92,19 @@ export function Footer() {
             <h1 className="mb-8 text-center text-2xl font-bold md:text-left">
               Apply Online
             </h1>
-            <div className="flex text-center  md:text-right">
+            <div className="flex justify-center flex-col sm:flex-row md:flex-col lg:flex-row md:text-right">
               <Link href="https://temp-app-pockettailwind.herokuapp.com/#pricing">
-                <a className="mr-2 rounded-xl border-[1px] border-black bg-black py-3 px-8 text-center text-base text-white duration-300 hover:border-[1px] hover:bg-white hover:text-black">
+                <a className="sm:mr-2 lg:mr-2 lg:mb-0 md:mr-0 rounded-xl sm:mb-0 mb-2 md:mb-2 border-[1px] border-black bg-black py-3 px-6 text-center text-base text-white duration-300 hover:border-[1px] hover:bg-white hover:text-black">
                   Start Trading
                 </a>
               </Link>
               <Link href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
                 <a
                   target="_blank"
-                  className="flex cursor-pointer items-center rounded-md border-[1px] border-slate-300 px-2"
+                  className="flex cursor-pointer items-center py-3 rounded-md border-[1px] border-slate-300 px-2"
                 >
                   <PlayIcon className="h-6 w-6 flex-none" />
-                  <span className="ml-2">Watch the video</span>
+                  <span className="ml-2 text-center">Watch the video</span>
                 </a>
               </Link>
             </div>

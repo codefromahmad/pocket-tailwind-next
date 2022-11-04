@@ -161,11 +161,7 @@ export function Header() {
                             </Link>
                             <Link href="https://www.community.ft9ja.com/">
                               <a
-                                className={`rounded-lg p-3 ${
-                                  router.pathname === '/contact'
-                                    ? 'bg-slate-200'
-                                    : ''
-                                } duration-300 hover:bg-slate-200`}
+                                className={`rounded-lg p-3 duration-300 hover:bg-slate-200`}
                               >
                                 Community
                               </a>
