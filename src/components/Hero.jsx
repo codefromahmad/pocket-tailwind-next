@@ -269,44 +269,49 @@ function AppDemo() {
             <span className="sm:px-2">100%</span>
           </div>
           <div className="mt-1 flex justify-between gap-2 border-t border-gray-200 py-1">
-            <span className="border-r-2 border-gray-400 text-center text-sm sm:px-2">
-              Funding Model
+            <span className="flex flex-col border-r-2 border-gray-400 text-center text-sm sm:px-2">
+              <span>Funding</span>
+              <span className="mt-[-6px]">Model</span>
             </span>
-            <span className="text-center text-sm sm:px-2">FT9ja Classic</span>
-            <span className="text-center text-sm font-bold text-[#28a745] sm:px-2">
-              FT9ja Challenge
+            <span className="flex flex-col text-center text-sm sm:px-2">
+              <span>Funding</span>
+              <span className="mt-[-6px]">Classic</span>
+            </span>
+            <span className="text-center flex flex-col text-sm font-bold text-[#28a745] sm:px-2">
+              <span>Funding</span>
+              <span className="mt-[-6px]">Challenge</span>
             </span>
           </div>
-          <div className="mt-1 flex justify-between gap-1 sm:gap-2 border-t border-gray-200 py-1">
-            <span className="px-[1px] sm:px-2 text-center text-sm">
-              $41
-              <br /> Trade with <br /> $5,000
-            </span>
-            <span className="px-[1px] sm:px-2 text-center text-sm">
-              $70
-              <br />
-              Trade with
-              <br /> $10,000
-            </span>
-            <span className="px-[1px] sm:px-2 text-center text-sm font-bold text-[#28a745]">
-              $143
-              <br /> Trade with
-              <br /> $25,000
-            </span>
+          <div className="mt-1 flex justify-between gap-1 border-t border-gray-200 py-1 sm:gap-2">
+            <div className="flex flex-col px-[1px] text-center text-sm sm:px-2">
+              <span>$41</span>
+              <span className="my-[-6px]">Trade with</span>
+              <span>$5,000</span>
+            </div>
+            <div className="flex flex-col px-[1px] text-center text-sm sm:px-2">
+              <span>$70</span>
+              <span className="my-[-6px]">Trade with</span>
+              <span>$10,000</span>
+            </div>
+            <div className="flex flex-col px-[1px] text-center text-sm font-bold text-[#28a745] sm:px-2">
+              <span>$143</span>
+              <span className="my-[-6px]">Trade with</span>
+              <span>$25,000</span>
+            </div>
           </div>
           <div className="mt-1 flex items-end justify-between gap-2 border-t border-gray-200 pt-1">
-            <div className="flex pl-4 flex-col items-center">
+            <div className="flex flex-col items-center pl-4">
               <p className="pb-2 text-center font-bold">$71.5</p>
-              <span className="h-12 w-14 bg-gray-400"></span>
+              <span className="h-12 w-14 bg-[#28a745]"></span>
             </div>
             <div className="flex flex-col justify-between">
-              <p className="py-10 text-center font-bold text-[#28a745]">
-                140X more returns
+              <p className="py-10 flex flex-col text-center font-bold text-[#28a745]">
+                <span>140X more</span> <span className="my-[-6px]">returns</span>
               </p>
             </div>
-            <div className="flex pr-4 flex-col items-center">
+            <div className="flex flex-col items-center pr-4">
               <p className="pb-2 text-center font-bold">$10,000</p>
-              <span className="h-[120px] w-14 bg-gray-400"></span>
+              <span className="h-[120px] w-14 bg-[#28a745]"></span>
             </div>
           </div>
           <div className="mt-2 flex justify-between">
