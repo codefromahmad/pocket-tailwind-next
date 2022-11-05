@@ -269,7 +269,7 @@ function AppDemo() {
             <span className="sm:px-2">100%</span>
           </div>
           <div className="mt-1 flex justify-between gap-2 border-t border-gray-200 py-1">
-            <span className="flex flex-col border-r-2 border-gray-400 text-center text-sm sm:px-2">
+            <span className="flex flex-col pr-2 border-r-2 border-gray-400 text-center text-sm sm:px-2">
               <span>Funding</span>
               <span className="mt-[-6px]">Model</span>
             </span>
@@ -382,7 +382,7 @@ export function Hero() {
             </div>
           </div>
           <div className="relative mt-10 max-h-[600px] sm:mt-20 lg:col-span-5 lg:row-span-2 lg:mt-0 lg:max-h-[800px] xl:col-span-6">
-            <BackgroundIllustration className="absolute left-1/2 top-4 h-[1026px] w-[1026px] -translate-x-1/3 stroke-gray-300/70 [mask-image:linear-gradient(to_bottom,white_20%,transparent_60%)] sm:top-16 sm:-translate-x-1/2 lg:-top-16 lg:ml-12 xl:-top-14 xl:ml-0" />
+            <BackgroundIllustration className="absolute left-1/2 top-4 h-[1026px] w-[1026px] -translate-x-1/2 stroke-gray-300/70 [mask-image:linear-gradient(to_bottom,white_20%,transparent_60%)] sm:top-16 lg:-top-16 lg:ml-12 xl:-top-14 xl:ml-0" />
             <motion.div
               {...Animations}
               className="-mx-4 h-[480px] px-2 pb-10 sm:h-[440px] lg:absolute lg:-inset-x-10 lg:-top-10 lg:-bottom-20 lg:h-[510px] lg:px-0 lg:pt-6 xl:-bottom-32"
