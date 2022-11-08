@@ -40,8 +40,8 @@ export function Header() {
         <Container className="relative z-50 flex justify-between py-8">
           <div className="relative z-10 flex items-center gap-16">
             <Link href="/" aria-label="Home">
-              <span className='w-20 h-12'>
-              <Image src={logo} alt="FT9ja Logo" className='cursor-pointer' />
+              <span className="h-12 w-20">
+                <Image src={logo} alt="FT9ja Logo" className="cursor-pointer" />
               </span>
             </Link>
             <div className="hidden justify-between lg:flex">
@@ -77,6 +77,13 @@ export function Header() {
                   } duration-300 hover:bg-slate-200`}
                 >
                   Community
+                </a>
+              </Link>
+              <Link href="https://ft9ja.netlify.app/">
+                <a
+                  className={`mx-1 rounded-lg p-3 duration-300 hover:bg-slate-200`}
+                >
+                  Apps
                 </a>
               </Link>
               <Link href="/contact">
@@ -153,17 +160,17 @@ export function Header() {
                                 className={`rounded-lg p-3 ${
                                   router.pathname === '/support'
                                     ? 'bg-slate-200'
-                                    : '' 
+                                    : ''
                                 } duration-300 hover:bg-slate-200`}
                               >
                                 Support/FAQs
                               </a>
                             </Link>
-                            <Link href="https://www.community.ft9ja.com/">
+                            <Link href="https://ft9ja.netlify.app/">
                               <a
                                 className={`rounded-lg p-3 duration-300 hover:bg-slate-200`}
                               >
-                                Community
+                                Apps
                               </a>
                             </Link>
                             <Link href="/contact">
