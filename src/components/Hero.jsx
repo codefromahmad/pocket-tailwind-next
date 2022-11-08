@@ -269,16 +269,16 @@ function AppDemo() {
             <span className="sm:px-2">100%</span>
           </div>
           <div className="mt-1 flex justify-between gap-2 border-t border-gray-200 py-1">
-            <span className="flex flex-col pr-2 border-r-2 border-gray-400 text-center text-sm sm:px-2">
+            <span className="flex flex-col border-r-2 border-gray-400 pr-2 text-center text-sm sm:px-2">
               <span>Funding</span>
               <span className="mt-[-6px]">Model</span>
             </span>
             <span className="flex flex-col text-center text-sm sm:px-2">
-              <span>Funding</span>
+              <span>FT9ja</span>
               <span className="mt-[-6px]">Classic</span>
             </span>
-            <span className="text-center flex flex-col text-sm font-bold text-[#28a745] sm:px-2">
-              <span>Funding</span>
+            <span className="flex flex-col text-center text-sm font-bold text-[#28a745] sm:px-2">
+              <span>FT9ja</span>
               <span className="mt-[-6px]">Challenge</span>
             </span>
           </div>
@@ -305,8 +305,9 @@ function AppDemo() {
               <span className="h-12 w-14 bg-[#28a745]"></span>
             </div>
             <div className="flex flex-col justify-between">
-              <p className="py-10 flex flex-col text-center font-bold text-[#28a745]">
-                <span>140X more</span> <span className="my-[-6px]">returns</span>
+              <p className="flex flex-col py-10 text-center font-bold text-[#28a745]">
+                <span>140X more</span>{' '}
+                <span className="my-[-6px]">returns</span>
               </p>
             </div>
             <div className="flex flex-col items-center pr-4">

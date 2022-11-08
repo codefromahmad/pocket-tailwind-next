@@ -153,7 +153,7 @@ export function Header() {
                                 className={`rounded-lg p-3 ${
                                   router.pathname === '/support'
                                     ? 'bg-slate-200'
-                                    : ''
+                                    : '' 
                                 } duration-300 hover:bg-slate-200`}
                               >
                                 Support/FAQs
