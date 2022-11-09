@@ -72,6 +72,7 @@ export function Header() {
               </Link>
               <Link href="https://www.community.ft9ja.com/">
                 <a
+                  target="_blank"
                   className={`mx-1 rounded-lg p-3 ${
                     router.pathname === '#' ? 'bg-slate-200' : ''
                   } duration-300 hover:bg-slate-200`}
@@ -81,6 +82,7 @@ export function Header() {
               </Link>
               <Link href="https://ft9ja.netlify.app/">
                 <a
+                  target="_blank"
                   className={`mx-1 rounded-lg p-3 duration-300 hover:bg-slate-200`}
                 >
                   Apps
@@ -166,8 +168,17 @@ export function Header() {
                                 Support/FAQs
                               </a>
                             </Link>
+                            <Link href="https://www.community.ft9ja.com/">
+                              <a
+                                target="_blank"
+                                className={`rounded-lg p-3 duration-300 hover:bg-slate-200`}
+                              >
+                                Community
+                              </a>
+                            </Link>
                             <Link href="https://ft9ja.netlify.app/">
                               <a
+                                target="_blank"
                                 className={`rounded-lg p-3 duration-300 hover:bg-slate-200`}
                               >
                                 Apps
