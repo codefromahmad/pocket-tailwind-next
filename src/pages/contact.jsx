@@ -5,6 +5,7 @@ import { ImFacebook, ImWhatsapp } from 'react-icons/im'
 import { GrInstagram } from 'react-icons/gr'
 import img from '../images/Avatar_1.png'
 import Image from 'next/image'
+import Head from 'next/head'
 
 const Contact = () => {
   const [inputs, setInputs] = useState('')
@@ -21,6 +22,9 @@ const Contact = () => {
   }
   return (
     <div>
+      <Head>
+        <title>Contact - FT9ja</title>
+      </Head>
       <Header />
       <div className="w-full bg-black">
         <div className="mx-auto max-w-screen-lg py-10">

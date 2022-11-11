@@ -8,6 +8,7 @@ import { Header } from '@/components/Header'
 import Rules from '@/components/Rules'
 import Swipper from '@/components/Swipper'
 import { Footer } from '@/components/Footer'
+import Head from 'next/head'
 
 const HowItWorks = () => {
   let [activePeriod, setActivePeriod] = useState('FT9ja Classic')
@@ -15,6 +16,9 @@ const HowItWorks = () => {
 
   return (
     <>
+      <Head>
+        <title>How it works - FT9ja</title>
+      </Head>
       <Header />
       <div className="flex justify-center bg-gray-900 px-2 pt-10 lg:mx-0">
         <div className="relative">

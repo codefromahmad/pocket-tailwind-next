@@ -1,5 +1,6 @@
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
+import Head from 'next/head'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { BiSearch } from 'react-icons/bi'
@@ -239,6 +240,9 @@ const Support = () => {
 
   return (
     <div>
+      <Head>
+        <title>Support/FAQs - FT9ja</title>
+      </Head>
       <Header />
       <div className="w-full" onClick={handleClose}>
         <div className="mx-auto max-w-screen-lg py-5 px-5">
