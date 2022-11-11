@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import { AuthLayout } from '@/components/AuthLayout'
 import { Button } from '@/components/Button'
-import { TextField } from '@/components/Fields'
+import { SelectField, TextField } from '@/components/Fields'
 
 export default function Register() {
   return (
@@ -59,33 +59,59 @@ export default function Register() {
               autoComplete="phone"
               required
             />
-            <TextField
+            <SelectField
               className="col-span-full"
               label="Broker"
               id="broker"
               name="broker"
-              type="broker"
-              autoComplete="broker"
               required
-            />
-            <TextField
+            >
+              <optgroup label="FT9ja Classic">
+                <option>ICMARKETS</option>
+                <option>FXTM</option>
+                <option>DERIV</option>
+              </optgroup>
+              <optgroup label="FT9ja Challenge">
+                <option>ICMARKETS</option>
+                <option>FXTM</option>
+              </optgroup>
+            </SelectField>
+
+            <SelectField
               className="col-span-full"
               label="Account Size"
-              id="accsize"
-              name="accsize"
-              type="accsize"
-              autoComplete="accsize"
+              id="payout"
+              name="payout"
               required
-            />
-            <TextField
+            >
+              <optgroup label="FT9ja Classic">
+                <option>$3000</option>
+                <option>$5000</option>
+                <option>$25,000</option>
+              </optgroup>
+              <optgroup label="FT9ja Challenge">
+                <option>$5000</option>
+                <option>$10000</option>
+                <option>$25,000</option>
+              </optgroup>
+            </SelectField>
+
+            <SelectField
               className="col-span-full"
               label="Payout"
               id="payout"
               name="payout"
-              type="payout"
-              autoComplete="payout"
               required
-            />
+            >
+              <optgroup label="FT9ja Classic">
+                <option>Weekly</option>
+                <option>Monthly</option>
+              </optgroup>
+              <optgroup label="FT9ja Challenge">
+                <option>Bi-weekly</option>
+                <option>Monthly</option>
+              </optgroup>
+            </SelectField>
             <TextField
               className="col-span-full"
               label="Referral Code"
@@ -114,7 +140,11 @@ export default function Register() {
               required
             />
           </div>
-          <Button type="submit" color="cyan" className="mt-8 w-full hover:bg-gray-800 focus:bg-[#28a745] duration-200 focus:text-white/80">
+          <Button
+            type="submit"
+            color="cyan"
+            className="mt-8 w-full duration-200 hover:bg-gray-800 focus:bg-[#28a745] focus:text-white/80"
+          >
             Get started today
           </Button>
         </form>
