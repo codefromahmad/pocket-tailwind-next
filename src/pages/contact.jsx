@@ -56,40 +56,40 @@ const Contact = () => {
         </p>
         <div className="mx-5 mb-10 rounded-lg border-2 border-gray-200 p-5">
           <form onSubmit={handleSubmit} className="flex flex-col">
-            <label className="py-3">Name</label>
+            <label className="py-3 block text-sm font-semibold text-gray-900">Name</label>
             <input
               type="text"
               name="name"
-              className="rounded-lg"
+              className="rounded-lg border-gray-200 text-gray-900 placeholder:text-gray-400 focus:border-cyan-500 outline-none focus:ring-offset-0 focus:ring-1 focus:ring-cyan-500 sm:text-sm"
               placeholder="Enter name"
               value={inputs.name || ''}
               onChange={handleChange}
             />
-            <label className="py-3">Email Address</label>
+            <label className="py-3 block text-sm font-semibold text-gray-900">Email Address</label>
             <input
               type="text"
               name="email"
-              className="rounded-lg"
+              className="rounded-lg border-gray-200 text-gray-900 placeholder:text-gray-400 focus:border-cyan-500 outline-none focus:ring-offset-0 focus:ring-1 focus:ring-cyan-500 sm:text-sm"
               placeholder="Enter email"
               value={inputs.email || ''}
               onChange={handleChange}
             />
-            <label className="py-3">Subject</label>
+            <label className="py-3 block text-sm font-semibold text-gray-900">Subject</label>
             <input
               type="text"
               name="subject"
-              className="rounded-lg"
+              className="rounded-lg border-gray-200 text-gray-900 placeholder:text-gray-400 focus:border-cyan-500 outline-none focus:ring-offset-0 focus:ring-1 focus:ring-cyan-500 sm:text-sm"
               placeholder="Enter subject"
               value={inputs.subject || ''}
               onChange={handleChange}
             />
-            <label className="py-3">Message</label>
+            <label className="py-3 block text-sm font-semibold text-gray-900">Message</label>
 
             <textarea
               value={inputs.message || ''}
               name="message"
               placeholder="Enter your message here"
-              className="mb-3 rounded-lg"
+              className="mb-3 rounded-lg border-gray-200 text-gray-900 placeholder:text-gray-400 focus:border-cyan-500 outline-none focus:ring-offset-0 focus:ring-1 focus:ring-cyan-500 sm:text-sm"
               onChange={handleChange}
             />
             <input

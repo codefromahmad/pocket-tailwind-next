@@ -114,7 +114,7 @@ export default function Register() {
               required
             />
           </div>
-          <Button type="submit" color="cyan" className="mt-8 w-full">
+          <Button type="submit" color="cyan" className="mt-8 w-full hover:bg-gray-800 focus:bg-[#28a745] duration-200 focus:text-white/80">
             Get started today
           </Button>
         </form>
