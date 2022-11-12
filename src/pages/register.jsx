@@ -4,8 +4,15 @@ import Link from 'next/link'
 import { AuthLayout } from '@/components/AuthLayout'
 import { Button } from '@/components/Button'
 import { SelectField, TextField } from '@/components/Fields'
+import { useState } from 'react'
 
 export default function Register() {
+  const [referral, setReferral] = useState()
+  const handleChange = (e) => {
+    if (e.target.value === 'Referral') setReferral('referral')
+    else if (e.target.value != 'referral') setReferral('')
+  }
+
   return (
     <>
       <Head>
@@ -112,15 +119,32 @@ export default function Register() {
                 <option>Monthly</option>
               </optgroup>
             </SelectField>
-            <TextField
+
+            <SelectField
               className="col-span-full"
-              label="Referral Code"
-              id="referral_code"
-              name="referral_code"
-              type="referral_code"
-              autoComplete="referral_code"
+              label="How did you hear about us?"
+              id="referral_source"
+              name="referral_source"
               required
-            />
+              onChange={(e) => handleChange(e)}
+            >
+              <option value="Google Search">Google search</option>
+              <option value="Friends">Friends</option>
+              <option value="Social media">Social media</option>
+              <option value="Trading group">Trading group</option>
+              <option value="Referral">Referral</option>
+            </SelectField>
+
+            {referral && (
+              <TextField
+                className="col-span-full"
+                label="Referral Code"
+                id="referral_code"
+                name="referral_code"
+                type="referral_code"
+                autoComplete="referral_code"
+              />
+            )}
             <TextField
               className="col-span-full"
               label="Password"
